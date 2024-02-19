@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callbacks</title>
+  </head>
+  <body>
+    <script>
+      //example 1
+      function greet(name, set) {
+        console.log(name);
+        set();
+      }
+      function good() {
+        console.log("bye");
+      }
+
+      greet("john", good);
+
+      //example 2
+      function greet(back) {
+        setTimeout(function () {
+          var data = "fetched data:";
+          back(data);
+        }, 2000);
+      }
+      function data(datas) {
+        console.log("proceesed data", datas);
+      }
+      greet(data);
+
+      //Example 3
+      function cal(a, b, func) {
+        let result = a + b;
+        func(result);
+      }
+      cal(5, 10, function (res) {
+        console.log(res);
+      });
+
+      //Example 4
+      function delay(time, fun) {
+        setTimeout(fun(), time);
+      }
+      function greet() {
+        console.log("hello");
+      }
+      delay(3000, greet);
+
+      //Example 5
+      var fruits = ["apple", "orange", "banana"];
+      function displayFruit(fruit) {
+        console.log(fruit);
+      }
+      process(displayFruit, fruits);
+      function process(a, b) {
+        for (var i = 0; i < b.length; i++) {
+          let elm = b[i];
+          a(i, elm);
+        }
+      }
+
+      // Example 6
+      function set(a, b, c) {
+        let sum = a + b;
+        c(sum);
+      }
+      set(10, 15, get);
+      function get(s) {
+        console.log(s);
+      }
+
+      //Example 7
+      function mul(num) {
+        let sum = num * 2;
+        return sum;
+      }
+      function app(s) {
+        return s(5);
+      }
+      console.log(app(mul));
+
+      //Example 8
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+      function num(index, number) {
+        console.log(index, ":", number);
+      }
+
+      function process(a, b) {
+        for (var i = 0; i < b.length; i++) {
+          let elm = b[i];
+          a(elm);
+        }
+      }
+
+      process(num, arr);
+    </script>
+  </body>
+</html>

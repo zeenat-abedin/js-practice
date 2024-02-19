@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods Practice</title>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        "Harry",
+        "Ross",
+        "Bruce",
+        "Cook",
+        "Carolyn",
+        "Morgan",
+        "Albert",
+        "Walker",
+      ];
+
+      console.log(arr.toString());
+
+      //pop removes the last element and returns it
+      let poppedElement = arr.pop();
+      console.log(poppedElement); //Walker
+      console.log(arr);
+
+      //push returns the new array length
+      let newArr = arr.push("Robert");
+      console.log(newArr); //8
+
+      //shift removes the first element and returns it
+      let shiftedElement = arr.shift();
+      console.log(shiftedElement); //Harry
+
+      //unshift returns the new array length
+      let unshiftedElement = arr.unshift(-2, -1);
+      console.log(unshiftedElement); //9
+      console.log(arr); //[-2, -1, 'Ross', 'Bruce', 'Cook', 'Carolyn', 'Morgan', 'Albert', 'Robert']
+
+      //slice extracts a section of an array and returns a new array.
+      let slicedArr = arr.slice(1, 3);
+      console.log(slicedArr); //[-1, 'Ross']
+
+      //find
+
+      let array1 = [5, 12, 8, 130, 44];
+      let found = array1.find((element) => element > 10);
+      console.log(found);
+
+      //
+      let hello = () => {
+        // document.getElementById("demo").innerHTML += this;
+        console.log("gghghg");
+      };
+
+      // // The window object calls the function:
+      window.addEventListener("load", hello);
+
+      // A button object calls the function:
+      // document.getElementById("btn").addEventListener("click", hello);
+      function regularFunction(a, b) {
+        console.log(arguments);
+      }
+      regularFunction(1, 2);
+    </script>
+  </body>
+</html>

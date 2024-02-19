@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    ;
+
+    <script>
+      let a = [1, 2, 3];
+      let b = [3, 4, 5];
+      let newArr = [];
+
+      for (let i = 0; i < a.length; i++) {
+        let result = 0;
+
+        for (let j = 0; j < b.length; j++) {
+          result += a[i] * b[j];
+        }
+        newArr.push(result);
+      }
+
+      console.log(newArr);
+      // output=[12,24,36]
+
+      //pass by value
+      function modifyValue(value) {
+        value = 10;
+      }
+
+      let num = 5;
+
+      console.log("before modifying", num);
+      modifyValue(num);
+      console.log("after modifying", num);
+
+      //pass by reference
+      function modifyArray(arr) {
+        arr.push(4);
+      }
+
+      let originalArr = [1, 2, 3];
+
+      console.log("before modifying", originalArr);
+      modifyArray(originalArr);
+      console.log("after modifying", originalArr);
+
+      //Closure example
+      function outer() {
+        let a = 10;
+        function inner() {
+          return a;
+        }
+        return inner;
+      }
+
+      let letter = outer();
+      console.log(letter());
+
+      //this
+      function myFunction() {
+        return this;
+      }
+      myFunction();
+
+      //callback
+      function cal(a, b, func) {
+        let result = a + b;
+        func(result);
+      }
+      cal(5, 10, function (res) {
+        console.log(res);
+      });
+    </script>
+  </body>
+</html>
