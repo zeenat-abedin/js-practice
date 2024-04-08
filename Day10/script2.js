@@ -22,3 +22,5 @@ function greet(person) {
 }
 
 greet(person)
+
+//prototypical inheritance
