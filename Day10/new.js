@@ -9,6 +9,8 @@ get[5] = 7;
 console.log(get);
 console.log(arr);
 
+console.log('------------------')
+
 //pass by value (do not affect the original arr)
 
 let arr2 = [3, 6, 8, 9];
@@ -19,6 +21,8 @@ set[4] = 7;
 
 console.log(set);
 console.log(arr2);
+
+console.log('------------------')
 
 //higher order functions/callback
 
@@ -33,6 +37,8 @@ function callback(d) {
 
 main(10, 5, callback);
 
+console.log('------------------')
+
 //closures
 
 function outer() {
@@ -45,6 +51,8 @@ function outer() {
 
 let closureFunc = outer();
 console.log(closureFunc());
+
+console.log('------------------')
 
 //call, apply, bind
 
@@ -62,3 +70,6 @@ person.apply(nameObj, ["Mumbai", "Maharashtra"]);
 
 let newObj = person.bind(nameObj, "Bengaluru", "Karnataka");
 newObj();
+
+console.log('------------------')
+
