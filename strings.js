@@ -1,4 +1,4 @@
-const gameName = new String('zeenat')
+const gameName = new String('zeenat-za')
 
 console.log(gameName[0])
 console.log(gameName.__proto__)
@@ -23,3 +23,5 @@ const url = "https://zeenat.com/zeenat%20abedin"
 console.log(url.replace('%20', '-'))
 console.log(url.includes('zeenat')) //true
 console.log(url.includes('sundar')) //false
+
+console.log(gameName.split('-'))
