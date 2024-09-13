@@ -21,3 +21,5 @@ console.log(newStringOne.trim()) // returns 'hitesh'
 // replace
 const url = "https://zeenat.com/zeenat%20abedin"
 console.log(url.replace('%20', '-'))
+console.log(url.includes('zeenat')) //true
+console.log(url.includes('sundar')) //false
