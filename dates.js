@@ -3,5 +3,5 @@ console.log(date.toString()) //Fri Sep 13 2024 23:45:36 GMT+0530 (India Standard
 
 console.log(typeof date) //object
 
-let myCreatedDate = new Date(2023, 0, 23, 5, 3)
-console.log(myCreatedDate.toDateString())
+let myCreatedDate = new Date("2023-01-14")
+console.log(myCreatedDate.toLocaleString())
