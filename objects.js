@@ -40,3 +40,11 @@ console.log(Object.keys(reactUser))  //["full name", "age", "email"]
 // Object.values
 
 console.log(Object.values(reactUser)) 
+
+// Object.entries
+
+console.log(Object.entries(reactUser)) 
+
+// Object.hasOwnProperty
+
+console.log(reactUser.hasOwnProperty("email"))
