@@ -23,3 +23,17 @@ console.log(obj3)
 //The {} is the target object. And obj1 and obj2 are the source objects.
 
 //The Object.assign() static method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object. This is of a similar concept to array flat method. So it's flat for arrays and assign for objects.
+
+// Object.keys
+
+const reactUser = {
+  "full name": "John Doe",
+   age: 18,
+   email: "john.23@gmail.com",
+}
+
+console.log(Object.keys(reactUser))  //["full name", "age", "email"]
+
+//Note: Now notice here, the datatype of the output value is an array. That means you can iterate over it.
+
+
