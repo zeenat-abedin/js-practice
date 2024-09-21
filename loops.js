@@ -7,3 +7,12 @@ for (let i = 1;  i <= 20; i++) {
     }
     console.log(`Value of i is ${i}`)
 }
+
+// while 
+let myArr = ['flash', 'batman', 'superman']
+let index = 0;
+
+while (index < myArr.length) {
+    console.log(`Value is ${myArr[index]}`)
+    index++;
+}
