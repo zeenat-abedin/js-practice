@@ -53,7 +53,7 @@ for (const [key, value] of map) {
     console.log(key, ':', value)
 }
 
-// for in
+// for in for objects
 
 const myObject = {
     js: 'javascript',
@@ -64,4 +64,12 @@ const myObject = {
 
 for (const key in myObject) {
     console.log(`Shortcut ${key} is for ${myObject[key]}`)
+}
+
+// for in for arrays
+
+const programming = ["js", "rb", "py", "java", "cpp"]
+
+for (const key in programming) {
+    console.log(programming[key])
 }
