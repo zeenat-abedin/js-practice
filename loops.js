@@ -74,6 +74,8 @@ for (const key in programming) {
     console.log(programming[key])
 }
 
+//forEach
+
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
 coding.forEach( (item) => {
@@ -98,3 +100,13 @@ const myCoding = [,
 myCoding.forEach((item) => {
     console.log(item.languageName)
 })
+
+// filter
+
+const myNums = [1,2,3,4,5,6,7,8,9,10]
+
+const newNums = myNums.filter((num) => {
+   return num > 4
+})
+
+console.log(newNums)
