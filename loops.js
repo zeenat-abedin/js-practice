@@ -143,3 +143,14 @@ const myNumArr = [1, 2, 3]
 
 const myTotal = myNumArr.reduce((acc, curr) => acc + curr, 0)
 console.log(myTotal)
+
+// reduce implementation in array of objects
+
+const shoppingCart = [
+    { name: 'apple', price: 100 },
+    { name: 'banana', price: 150 },
+    { name: 'orange', price: 150 },
+]
+
+const totalPrice = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+console.log(totalPrice)
