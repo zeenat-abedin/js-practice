@@ -73,3 +73,9 @@ const programming = ["js", "rb", "py", "java", "cpp"]
 for (const key in programming) {
     console.log(programming[key])
 }
+
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+coding.forEach( (item) => {
+    console.log(item)
+})
