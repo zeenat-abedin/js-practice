@@ -110,3 +110,14 @@ const newNums = myNums.filter((num) => {
 })
 
 console.log(newNums)
+
+// OR like the below
+
+const newNumbers = []
+myNums.forEach((num) => {
+    if (num > 4) {
+        newNumbers.push(num)
+    }
+})
+
+console.log(newNumbers)
