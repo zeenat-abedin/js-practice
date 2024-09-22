@@ -136,3 +136,10 @@ const newNumbersArr = myNumbers.map((num) => num * 10)
     .filter((num) => num >= 40)
 
 console.log(newNumbersArr)
+
+// reduce
+
+const myNumArr = [1, 2, 3]
+
+const myTotal = myNumArr.reduce((acc, curr) => acc + curr, 0)
+console.log(myTotal)
