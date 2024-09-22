@@ -52,3 +52,16 @@ console.log(map)
 for (const [key, value] of map) {
     console.log(key, ':', value)
 }
+
+// for in
+
+const myObject = {
+    js: 'javascript',
+    cpp: 'C++',
+    swift: 'swift by apple',
+    rb: 'ruby'
+}
+
+for (const key in myObject) {
+    console.log(`Shortcut ${key} is for ${myObject[key]}`)
+}
