@@ -1,3 +1,10 @@
+//Block Scope- variables declared inside a pair of curly braces cannot be accessed from outside the block.
+
+//Function Scope- variables declared inside a function cannot be accessed from outside the function
+
+//Global Scope- globally scoped variables can be accessed inside a block or a function
+
+
 if (true) {
     let a = 10
     const b = 20
