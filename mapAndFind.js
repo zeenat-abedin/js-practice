@@ -8,6 +8,11 @@ const items = [
     { name: 'Keyboard', price: 25 },
 ]
 
+const foundItem = items.find(item => item.name === 'Book')
+
+console.log(foundItem)
+
 const itemNames = items.map(item => item.name)
 
 console.log(itemNames)
+
