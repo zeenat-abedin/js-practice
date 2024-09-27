@@ -20,3 +20,6 @@ items.forEach(item => console.log(item.name))
 
 const hasInexpensiveItems = items.some(item => item.price <= 100)
 console.log(hasInexpensiveItems) //Output -> true
+
+const areAllInexpensiveItems = items.every(item => item.price <= 1000)
+console.log(areAllInexpensiveItems) //Output -> true
