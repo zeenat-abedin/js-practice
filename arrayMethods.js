@@ -23,3 +23,6 @@ console.log(hasInexpensiveItems) //Output -> true
 
 const areAllInexpensiveItems = items.every(item => item.price <= 1000)
 console.log(areAllInexpensiveItems) //Output -> true
+
+const total = items.reduce((acc, curr) => acc + curr.price, 0)
+console.log(total)
