@@ -16,3 +16,4 @@ const itemNames = items.map(item => item.name)
 
 console.log(itemNames)
 
+items.forEach(item => console.log(item.name))
