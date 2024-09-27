@@ -17,3 +17,6 @@ const itemNames = items.map(item => item.name)
 console.log(itemNames)
 
 items.forEach(item => console.log(item.name))
+
+const hasInexpensiveItems = items.some(item => item.price <= 100)
+console.log(hasInexpensiveItems) //Output -> true
