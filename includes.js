@@ -34,4 +34,4 @@ function checkUserName(userName) {
 console.log(checkUserName('Arabella')) //The user name: Arabella was found
 console.log(checkUserName('laura')) //The user name: laura cannot be found.  
 
-//Even if Laura is there in the array but still it went into the else case as the name starts with a lowercase and therefore it is case -sensitive
+//Even if Laura is in the array, it went into the else case since we are logging a name that starts with a lowercase and lowercase names are case-sensitive
