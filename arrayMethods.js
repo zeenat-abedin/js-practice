@@ -1,3 +1,7 @@
+const array1 = ['a', 'b', 'c'];
+
+array1.forEach((element) => console.log(element));
+
 const items = [
     { name: 'Bike', price: 100 },
     { name: 'TV', price: 200 },
@@ -7,6 +11,7 @@ const items = [
     { name: 'Computer', price: 1000 },
     { name: 'Keyboard', price: 25 },
 ]
+items.forEach(item => console.log(item.name))
 
 const foundItem = items.find(item => item.name === 'Book')
 
@@ -16,7 +21,6 @@ const itemNames = items.map(item => item.name)
 
 console.log(itemNames)
 
-items.forEach(item => console.log(item.name))
 
 const hasInexpensiveItems = items.some(item => item.price <= 100)
 console.log(hasInexpensiveItems) //Output -> true
