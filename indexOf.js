@@ -4,4 +4,6 @@ function checkName(name) {
     return names.indexOf(name)
 }
 
-console.log(checkName("Arabella"))
+console.log(checkName("Arabella")) //0
+console.log(checkName("Norbert")) //2
+console.log(checkName("Tony")) //-1
