@@ -1,4 +1,5 @@
 //Syntax - Array.from(object, mapFunction, thisvalue)
+//mapFunction and thisValue are optional
 
 const users = [
     { name: 'Arabella', age: 29 },
