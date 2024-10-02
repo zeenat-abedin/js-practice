@@ -9,10 +9,7 @@ console.log(checkName("Norbert")) //2
 console.log(checkName("Tony")) //-1
 // since this is not present in the array
 
-
-function reverseCheckName(name) {
-    return names.lastIndexOf(name)
-}
+const reverseCheckName = (name) => (names.lastIndexOf(name))
 
 console.log(reverseCheckName("Norbert")) //4
 console.log(reverseCheckName("Laura")) //3
