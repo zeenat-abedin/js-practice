@@ -7,5 +7,4 @@ const users = [
 ]
 
 const usersTotalIncome = users.reduce((acc, curr) => acc + curr.income, 0)
-
 console.log(usersTotalIncome) //2000
