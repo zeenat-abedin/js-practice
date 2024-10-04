@@ -52,5 +52,7 @@ input[type="email"]{
 button{
     padding: 0.5rem;
     background-color: #8a2be2;
-    color: #fff
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
