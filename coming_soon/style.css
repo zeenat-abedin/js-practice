@@ -26,3 +26,8 @@ body, html{
     height: 75px;
     object-fit: contain;
 }
+
+h1{
+    color: #333;
+    margin-bottom: 20px;
+}
