@@ -36,3 +36,15 @@ p {
   color: #666;
   margin-bottom: 20px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"]{
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc
+
+}
