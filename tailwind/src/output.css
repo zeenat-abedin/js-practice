@@ -554,9 +554,21 @@ video {
   display: none;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .bg-orange-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(194 65 12 / var(--tw-bg-opacity));
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .underline {
