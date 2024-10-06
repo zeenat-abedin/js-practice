@@ -558,6 +558,14 @@ video {
   margin-top: 1rem;
 }
 
+.flex {
+  display: flex;
+}
+
+.h-lvh {
+  height: 100lvh;
+}
+
 .bg-orange-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(194 65 12 / var(--tw-bg-opacity));
