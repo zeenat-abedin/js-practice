@@ -5,4 +5,4 @@ let sets = arr1.flatMap(num => {
 });
 console.log(sets);
 
-//Otput -> [ 1, 2, 4, 3 ]
+//Output -> [ 1, 2, 4, 3 ]
