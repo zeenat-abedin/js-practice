@@ -46,3 +46,19 @@ for (const num of numbers) {
 console.log(smallNumbers)
 
 //Note - for-of is basically syntactic sugar of for loop
+
+/*
+4. Write a for-of loop that loops through the array ["chai", "green tea", "herbal tea", "black tea"] and skip "herbal tea". Store the other teas in an array named "preferredTeas". 
+*/
+
+let newTeas = ["chai", "green tea", "herbal tea", "black tea"]
+let preferredTeas = []
+
+for (const tea of newTeas) {
+    if (tea === 'herbal tea') {
+        continue
+    }
+    preferredTeas.push(tea)
+}
+
+console.log(preferredTeas)
