@@ -7,6 +7,9 @@ let selectedTeas = [];
 
 for (let i = 0; i < teas.length; i++) {
     const element = teas[i];
+    if (element === 'chai') {
+        break;
+    }
     selectedTeas.push(element)
 }
 console.log(selectedTeas); // This will print: ["green tea", "black tea"]
