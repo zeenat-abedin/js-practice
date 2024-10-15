@@ -140,3 +140,19 @@ teaCollection.forEach(tea => {
 
 console.log(availableTeas) //Output -> ["earl grey", "green tea", "oolong tea"]
     
+/*
+8.
+Write a forEach loop that iterates through the array ["Berlin", "Tokyo", "Sydney", "Paris"]. Skip "Sydney" and store the other cities in a new array named travelledCities.
+*/
+
+let myWorldCities = ["Berlin", "Tokyo", "Sydney", "Paris"]
+let travelledCities = []
+
+myWorldCities.forEach(city => {
+    if (city == "Sydney") {
+        return
+    }
+    travelledCities.push(city)
+})
+    
+console.log(travelledCities) //Output -> ["Berlin", "Tokyo", "Paris"]
