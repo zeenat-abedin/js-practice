@@ -156,3 +156,20 @@ myWorldCities.forEach(city => {
 })
     
 console.log(travelledCities) //Output -> ["Berlin", "Tokyo", "Paris"]
+
+/*
+9. Write a for loop that iterates through the array [2, 5, 7, 9]. Skip the value 7 and multiply the rest by 2. Store the results in a new array named doubledNumbers.
+*/
+
+let myNumbers = [2, 5, 7, 9]
+let doubledNumbers = []
+
+for (let i = 0; i < myNumbers.length; i++) {
+    if (myNumbers[i] === 7) {
+        continue
+    }
+    doubledNumbers.push(myNumbers[i] * 2)
+}
+
+console.log(doubledNumbers) //Output -> [4, 10, 18]
+
