@@ -30,3 +30,10 @@ console.log(areAllInexpensiveItems) //Output -> true
 
 const total = items.reduce((acc, curr) => acc + curr.price, 0)
 console.log(total)
+
+//remaining methods
+
+//entries
+//at
+//some
+//toLocateString
