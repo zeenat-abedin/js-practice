@@ -1,6 +1,7 @@
 .red, .green, .blue {
   display: block;
   width: 100px;
+  height: 100px;
   color: white;
   line-height: 100px;
   text-align: center;
@@ -10,14 +11,15 @@
 .red { 
   background: red;
   z-index: 3;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 20%;
 }
 
 .green { 
   background: green;
-  z-index: 1;
-  left: calc(50%+20px)
+  z-index: 2;
+  top: 35%;
+  left: 35%;
 }
 
 .blue { 
