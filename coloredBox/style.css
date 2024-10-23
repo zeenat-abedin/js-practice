@@ -24,5 +24,7 @@
 
 .blue { 
   background: blue;
-  z-index: 2;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
 }
