@@ -8,6 +8,7 @@ import './App.css'
 function App() {
   const [users, setUsers] = useState([])
   const [search, setSearch] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   const getUsersData = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -16,7 +17,10 @@ function App() {
   }
 
   useEffect(() => {
-    getUsersData().then((res) => setUsers(res))
+    setIsLoading(true)
+    getUsersData().then((res) => setUsers(res)).finally(
+      () => setIsLoading(false)
+    )
   }, [])
 
   const handleSearchChange = (e) => {
@@ -33,7 +37,8 @@ const filterUsersData = () => {
   
   return (
     <>
-      <input value={search} onChange={handleSearchChange} placeholder='Search...'/>
+      <input value={search} onChange={handleSearchChange} placeholder='Search...' />
+      {isLoading && <p>Loading...</p>}
       <table>
         <thead>
           <tr>
