@@ -22,15 +22,14 @@ function App() {
   const handleSearchChange = (e) => {
       setSearch(e.target.value)
   }
-
-  const filterUsersData = () => {
-    if (search.trim()) {
-      users.filter((user) =>
-        user.name.toLowerCase().includes(search.toLowerCase()) || user.username.toLowerCase().includes(search.toLowerCase())
-      ) 
-    }
-    return users
+const filterUsersData = () => {
+  if (search.trim()) {
+    return users.filter((user) =>
+      user.name.toLowerCase().includes(search.toLowerCase()) || user.username.toLowerCase().includes(search.toLowerCase())
+    )
   }
+  return users
+}
   
   return (
     <>
