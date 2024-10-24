@@ -18,8 +18,9 @@ function App() {
 
   useEffect(() => {
     setIsLoading(true)
-    getUsersData().then((res) => setUsers(res)).finally(
-      () => setIsLoading(false)
+    getUsersData()
+      .then((res) => setUsers(res))
+      .finally(() => setIsLoading(false)
     )
   }, [])
 
