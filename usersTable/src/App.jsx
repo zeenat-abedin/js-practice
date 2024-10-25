@@ -4,6 +4,7 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
+import ProgressBar from './ProgressBar'
 
 function App() {
   const [users, setUsers] = useState([])
@@ -62,6 +63,7 @@ const filterUsersData = () => {
             ))}
         </tbody>
       </table>
+      <ProgressBar/>
     </>
   )
 }
