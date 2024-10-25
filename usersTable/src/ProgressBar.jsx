@@ -5,21 +5,15 @@ const ProgressBar = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    let interval = null;
-
-    if (!isPaused && progress < 100) {
-      interval = setInterval(() => {
+    if (progress < 100 && !isPaused) {
+      const interval = setInterval(() => {
         setProgress((prev) => Math.min(prev + 1, 100)); 
       }, 100);
-    }
 
-    if (progress === 100) {
-      clearInterval(interval); 
+      return () => clearInterval(interval);
     }
-
-    return () => clearInterval(interval);
   }, [progress, isPaused]);
-    
+
   useEffect(() => {
     if (progress === 40) {
       setIsPaused(true); 
