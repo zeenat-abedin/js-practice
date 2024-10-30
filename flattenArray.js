@@ -19,9 +19,9 @@ const getFlatArray = (arr, depth) => {
       return acc;
     },[])
   }
-  
   return flatHelper(arr, 0);
 }
 
 console.log(getFlatArray([1,[2], [3,4]] , 1));
-console.log(getFlatArray([1,[2, [3,4]]] , 1));
+console.log(getFlatArray([1, [2, [3, 4]]], 1));
+console.log(getFlatArray([1,[2, [3,4]]] , 2));
