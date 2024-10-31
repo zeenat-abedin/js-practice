@@ -36,7 +36,6 @@ console.log(Object.keys(reactUser))  //["full name", "age", "email"]
 
 //Note: Now notice here, the datatype of the output value is an array. That means you can iterate over it.
 
-
 // Object.values
 
 console.log(Object.values(reactUser)) 
