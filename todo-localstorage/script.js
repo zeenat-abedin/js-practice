@@ -15,4 +15,5 @@ addTaskButton.addEventListener('click', () => {
     }
 
     tasks.push(newTask) 
+    todoInput.value = ""
 })
