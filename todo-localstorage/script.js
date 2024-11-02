@@ -1,8 +1,11 @@
-const todoInput = document.getElementById("todo-input")
+document.addEventListener('DOMContentLoaded', () => {
+    const todoInput = document.getElementById("todo-input")
 const addTaskButton = document.getElementById("add-task-btn")
 const todoList = document.getElementById("todo-list")
 
-let tasks = []
+let tasks = localStorage.getItem("tasks") || []
+
+tasks.forEach(() => renderTask(task))
 
 addTaskButton.addEventListener('click', () => {
     const taskText = todoInput.value.trim()
@@ -20,6 +23,10 @@ addTaskButton.addEventListener('click', () => {
     console.log(tasks)
 })
 
-function saveTasks() {
+    function renderTask(task) {
+        console.log(task)
+    }
+    function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks))
-}
+   }
+})
