@@ -32,8 +32,8 @@ addTaskButton.addEventListener('click', () => {
         `
         todoList.appendChild(li)
     }
-    
+
     function saveTasks() {
        localStorage.setItem("tasks", JSON.stringify(tasks))
-   }
+    }
 })
