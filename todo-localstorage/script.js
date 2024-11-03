@@ -26,7 +26,13 @@ addTaskButton.addEventListener('click', () => {
     function renderTask(task) {
         const li = document.createElement("li")
         li.setAttribute('data-id', task.id)
+        li.innerHTML = `
+           <span>${task.text}</span>
+           <button class="delete-btn">Delete</button>
+        `
+        todoList.appendChild(li)
     }
+    
     function saveTasks() {
        localStorage.setItem("tasks", JSON.stringify(tasks))
    }
