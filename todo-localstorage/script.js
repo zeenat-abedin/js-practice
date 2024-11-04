@@ -37,7 +37,10 @@ addTaskButton.addEventListener('click', () => {
             saveTasks()
         })
         li.querySelector('button').addEventListener('click', (e) => {
-            e.stopPropagation()
+            e.stopPropagation() //prevent toggle from firing
+            tasks = tasks.filter(t => t.id !== task.id)
+            li.remove()
+            saveTasks()
         })
         todoList.appendChild(li)
     }
