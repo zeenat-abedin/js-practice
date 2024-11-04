@@ -30,6 +30,10 @@ addTaskButton.addEventListener('click', () => {
            <span>${task.text}</span>
            <button class="delete-btn">Delete</button>
         `
+        li.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') return
+            task.completed = !task.completed
+        })
         todoList.appendChild(li)
     }
 
