@@ -33,6 +33,11 @@ addTaskButton.addEventListener('click', () => {
         li.addEventListener('click', (e) => {
             if (e.target.tagName === 'BUTTON') return
             task.completed = !task.completed
+            li.classList.toggle('completed')
+            saveTasks()
+        })
+        li.querySelector('button').addEventListener('click', (e) => {
+            e.stopPropagation()
         })
         todoList.appendChild(li)
     }
