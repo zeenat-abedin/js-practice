@@ -3,4 +3,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const getWeatherBtn = document.getElementById("city-input")
     const weatherInfo = document.getElementById("weather-info")
     const cityNameDisplay = document.getElementById("city-name")
+    const temperatureDisplay = document.getElementById("temperature")
 })
