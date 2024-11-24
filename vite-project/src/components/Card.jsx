@@ -1,4 +1,4 @@
-const Card = () => {
+const Card = ({username}) => {
   return (
     <div>
        <figure className="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
@@ -12,10 +12,10 @@ const Card = () => {
        </p>
        </blockquote>
        <figcaption className="font-medium">
-       <div class="text-sky-500 dark:text-sky-400">
-        Sarah Dayan
+       <div className="text-sky-500 dark:text-sky-400">
+        {username}
        </div>
-       <div class="text-slate-700 dark:text-slate-500">
+       <div className="text-slate-700 dark:text-slate-500">
         Staff Engineer, Algolia
        </div>
        </figcaption>
