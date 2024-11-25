@@ -16,7 +16,7 @@ const Card = ({username}) => {
         {username}
        </div>
        <div className="text-slate-700 dark:text-slate-500">
-        Staff Engineer, Algolia
+         {username}
        </div>
        </figcaption>
        </div>
