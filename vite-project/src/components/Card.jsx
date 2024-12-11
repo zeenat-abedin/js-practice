@@ -8,7 +8,7 @@ const Card = ({username}) => {
        <p className="text-lg font-medium">
         Tailwind CSS is the only framework that I have seen scale
         on large teams. It’s easy to customize, adapts to any design,
-        and the build size is tiny.
+        and the build size is tiny. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, nisi.
        </p>
        </blockquote>
        <figcaption className="font-medium">
