@@ -1,4 +1,4 @@
-const Card = ({username}) => {
+const Card = (username) => {
   return (
     <div>
        <figure className="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
