@@ -18,7 +18,12 @@ function NameList() {
         {
             "name": "John",
             "age": 30,
-            "skill": "Sherlyn"
+            "skill": "Typescript"
+        },
+        {
+            "name": "Zerab",
+            "age": 30,
+            "skill": "React Native"
         }
     ]
     const namesList = names.map(name => <h2 key={names[0]}>{name}</h2>)
