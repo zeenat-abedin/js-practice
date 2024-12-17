@@ -1,3 +1,5 @@
+import Person from "./Person"
+
 function NameList() {
     const persons = [
         {
@@ -31,7 +33,12 @@ function NameList() {
             "skill": "React Native"
         }
     ]
-    const personList = persons.map(person => <h2 key={person.id}>{person.name}</h2>)
+    const personList = persons.map(person =>
+        <Person
+            person={person}
+            key={person.id}
+        />       
+    )
     return <div>{personList}</div>
 }
 

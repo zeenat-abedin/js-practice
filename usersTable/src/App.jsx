@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import ProgressBar from './ProgressBar'
 import Person from './Person'
+import NameList from './NameList'
 
 function App() {
   const [users, setUsers] = useState([])
@@ -40,7 +41,7 @@ const filterUsersData = () => {
   
   return (
     <>
-      <Person name="John Doe" age={18} skill="ReactJS"/>
+      <NameList/>
       <input value={search} onChange={handleSearchChange} placeholder='Search...' />
       {isLoading && <p>Loading...</p>}
       <table>
