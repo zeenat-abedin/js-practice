@@ -12,13 +12,13 @@ function NameList() {
             id: 2,
             "name": "Bruce",
             "age": 30,
-            "skill": "React"
+            "skill": "Django"
         },
         {
             id: 3,
             "name": "Kylie",
             "age": 30,
-            "skill": "React"
+            "skill": "Python"
         },
         {
             id: 4,
