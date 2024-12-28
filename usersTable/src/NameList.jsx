@@ -33,7 +33,7 @@ function NameList() {
             "skill": "React Native"
         }
     ]
-    const personList = persons.map(person =>
+    const personList = persons?.map(person =>
         <Person
             person={person}
             key={person.id}
