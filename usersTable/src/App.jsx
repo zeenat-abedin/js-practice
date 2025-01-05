@@ -7,6 +7,7 @@ import './App.css'
 import ProgressBar from './ProgressBar'
 import Person from './Person'
 import NameList from './NameList'
+import Form from './Form'
 
 function App() {
   const [users, setUsers] = useState([])
@@ -41,8 +42,9 @@ const filterUsersData = () => {
   
   return (
     <>
-      <NameList/>
-      <input value={search} onChange={handleSearchChange} placeholder='Search...' />
+      <NameList />
+      <Form/>
+      {/* <input value={search} onChange={handleSearchChange} placeholder='Search...' />
       {isLoading && <p>Loading...</p>}
       <table>
         <thead>
@@ -66,7 +68,7 @@ const filterUsersData = () => {
             ))}
         </tbody>
       </table>
-      <ProgressBar/>
+      <ProgressBar/> */}
     </>
   )
 }
