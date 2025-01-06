@@ -42,8 +42,8 @@ const filterUsersData = () => {
   
   return (
     <>
-      <NameList />
-      <Form/>
+      <Form />
+      {/* <NameList /> */}
       {/* <input value={search} onChange={handleSearchChange} placeholder='Search...' />
       {isLoading && <p>Loading...</p>}
       <table>
