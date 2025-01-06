@@ -3,6 +3,14 @@ import { useState } from 'react'
 function Form() {
     const [name, setName] = useState('');
     const [comments, setComments] = useState('')
+
+    function handleUserNameChange(e) {
+        setName(e.target.value)
+    }
+    function handleCommentsChange(e) {
+        setComments(e.target.value)
+    }
+
     return (
     <form>
         <div>
@@ -10,14 +18,14 @@ function Form() {
             <input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleUserNameChange}
             />
         </div>
         <div>
             <label htmlFor="">Comments</label>
             <textarea
                 value={comments}
-                onChange={(e) => setComments(e.target.value)} 
+                onChange={handleCommentsChange} 
             />
         </div>
     </form>
