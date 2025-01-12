@@ -14,7 +14,7 @@ function Form() {
     return (
     <form>
         <div>
-            <label>Username</label>
+            <label htmlFor='name'>Username</label>
             <input
                 type="text"
                 value={name}
@@ -22,7 +22,7 @@ function Form() {
             />
         </div>
         <div>
-            <label htmlFor="">Comments</label>
+            <label htmlFor='comments'>Comments</label>
             <textarea
                 value={comments}
                 onChange={handleCommentsChange} 
