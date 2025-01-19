@@ -27,7 +27,11 @@ function Form() {
                 value={comments}
                 onChange={handleCommentsChange} 
             />
-        </div>
+            </div>
+            <div>
+                <label htmlFor="">Topic</label>
+                <select name="" id=""></select>
+            </div>
     </form>
   )
 }
