@@ -17,7 +17,6 @@ heroes.map((hero): string => {
 })
 
 //union type: more than one type
-
 function getValue(myVal: number): boolean{
     if (myVal > 5) {
         return true
@@ -26,13 +25,11 @@ function getValue(myVal: number): boolean{
 }
 
 //void
-
 function consoleError(errmsg: string): void{
     console.error(errmsg)
 }
 
 //never
-
 function handleError(errmsg: string): never {
     throw new Error(errmsg);
 }
