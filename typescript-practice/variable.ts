@@ -9,8 +9,6 @@ userId.toFixed()
 //boolean 
 let isLoggedIn: boolean = false;
 
-let hero;
-
 const heroes = ["thor", "spiderman", "ironman"]
 
 heroes.map((hero): string => {
