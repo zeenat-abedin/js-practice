@@ -11,8 +11,8 @@ let isLoggedIn: boolean = false;
 
 let hero;
 
-function getHero() {
-    return "thor"
-}
+const heroes = ["thor", "spiderman", "ironman"]
 
-hero = getHero()
+heroes.map((hero): string => {
+    return `hero is ${hero}`
+})
