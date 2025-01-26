@@ -20,4 +20,15 @@ let loginUser = (name: string, email: string, isPaid: boolean) => {
 signUpUser("zeenat", "abc@gmail.com", false);
 loginUser("z", "z@gmail.com", true);
 
+
+const getHello = (S: string): string => {
+    return ""
+}
+
+const heros = ["thor", "spiderman", "ironman"]
+
+heros.map((hero): string => {
+    return `hero is ${hero}`
+})
+
 export {};
