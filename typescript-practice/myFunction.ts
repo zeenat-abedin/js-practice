@@ -1,4 +1,4 @@
-function addTwo(num: number) {
+function addTwo(num: number): number{
   return num + 2;
 }
 
