@@ -1,13 +1,17 @@
-// const User = {
-//     name: 'John Doe',
-//     email: 'john@lco.dev',
-//     isActive: true,
-// }
 
-function createUser({name: string, isPaid: boolean}){
-    
+//aliasing
+
+type User = {
+    name: string,
+    email: string,
+    isActive: boolean,
 }
 
-let newUser = {name: "zeenat", isPaid: false, email: "h@h.com"}
+function createUser(user: User): User {
+    return {name: "", email: "", isActive: true}
+}
 
-createUser(newUser)
+createUser({name: "zeenat", email: "h@h.com", isActive: false,})
+
+
+export {}
