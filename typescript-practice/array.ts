@@ -11,6 +11,13 @@ type User = {
 
 const allUsers: User[] = []
 
+//array inside array
+
+const MLModels: number[][] = [
+    [1, 2, 3],
+    [4, 5, 6],
+]
+
 superHeros.push("spiderman")
 heroPower.push(2)
 
