@@ -4,12 +4,12 @@ const superHeros: string[] = []
 
 const heroPower: Array<number> = []
 
-type User = {
+type AUser = {
     name: string,
     isActive: boolean
 }
 
-const allUsers: User[] = []
+const allUsers: AUser[] = []
 
 //array inside array
 
