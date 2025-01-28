@@ -1,5 +1,10 @@
 //Tuple destructuring
 
+let input = [1, 2];
+let [first, second] = input;
+console.log(first); 
+console.log(second);
+
 let tuple: [number, string, boolean] = [7, "hello", true];
 let [a, b, c] = tuple; // a: number, b: string, c: boolean
 
