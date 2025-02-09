@@ -1,7 +1,9 @@
+import Postform from './components/Postform'
+
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Postform/>
     </div>
   );
 }
