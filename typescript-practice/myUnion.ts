@@ -17,10 +17,6 @@ let john: User | Admin = {name: "john", id: 234}
 
 john = { username: "jd", id: 234 }
 
-// function getDbId(id: number | string){
-//     console.log(`DB id is: ${id}`);  
-// }
-
 function getDbId(id: number | string){
     if (typeof id === "string") {
         id.toLowerCase()
