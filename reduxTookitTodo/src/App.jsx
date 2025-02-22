@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     <h1>Learn about redux toolkit</h1>
+     <h1>Learn about redux toolkit..</h1>
     </>
   )
 }
