@@ -8,9 +8,9 @@ function App() {
   const [ password, setPassword ] = useState('')
 
   return (
-    <>
-     <h1 className='bg-red-400'>Setup ready</h1>
-    </>
+    <div className='w-full max-w-md mx-auto shadow-md'>
+     <h1 className='text-white text-center bg-red-400'>Passoword Generator</h1>
+    </div>
   )
 }
 
