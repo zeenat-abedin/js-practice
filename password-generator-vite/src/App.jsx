@@ -24,16 +24,15 @@ function App() {
       </div>
       <div className="flex text-sm gap-x-2">
         <input 
-          type="range"
-          min={6}
-          max={100}
-          value={length}
-          className="cursor-pointer"
-          onChange={(e) => setLength(e.target.value)}
+          type="checkbox"
+          id="characterInput"
+          defaultChecked={numberAllowed}
+          onChange={()=>{
+            setNumberAllowed((prev) => !prev);
+          }}
           name=""
-          id="" 
         />
-        <label className="text-gray-400" htmlFor="">Length: {length}</label>
+        <label className="text-gray-400" htmlFor="">Numbers</label>
       </div>
     </div>
   );
