@@ -24,15 +24,27 @@ function App() {
       </div>
       <div className="flex text-sm gap-x-2">
         <input 
-          type="checkbox"
-          id="characterInput"
+          type="range"
+          id="numbers"
           defaultChecked={numberAllowed}
           onChange={()=>{
             setNumberAllowed((prev) => !prev);
           }}
           name=""
         />
-        <label className="text-gray-400" htmlFor="">Numbers</label>
+        <label className="text-gray-400" htmlFor="numbers">Numbers</label>
+      </div>
+      <div className="flex text-sm gap-x-2">
+        <input 
+          type="checkbox"
+          id="characterInput"
+          defaultChecked={charAllowed}
+          onChange={()=>{
+            setCharAllowed((prev) => !prev);
+          }}
+          name=""
+        />
+        <label className="text-gray-400" htmlFor="charInput">Character</label>
       </div>
     </div>
   );
