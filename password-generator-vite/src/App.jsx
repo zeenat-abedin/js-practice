@@ -8,7 +8,7 @@ function App() {
   const [password, setPassword] = useState("");
 
   const generatePassword = useCallback(() => {
-    let pass = ""
+    let pass = "";
     let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     if(numberAllowed) str += "0123456789"
