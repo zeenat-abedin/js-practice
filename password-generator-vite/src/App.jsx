@@ -12,6 +12,11 @@ function App() {
     let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     if(numberAllowed) str += "0123456789"
+    if(charAllowed) str += "!@#$%^&*()_+-={}:<>?"
+
+    for (let i = 1; i < length; i++) {
+     Math.floor(Math.random() * str.length + 1)
+    }
   })
 
   return (
