@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -6,6 +6,13 @@ function App() {
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("");
+
+  const generatePassword = useCallback(() => {
+    let pass = ""
+    let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    if(numberAllowed) str += "0123456789"
+  })
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md  bg-gray-800 text-orange-500">
