@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Vs Event Capturing</title>
+
+    <style>
+        #topDiv{
+            border: 10px solid purple;
+            padding: 10px;
+            width: 0 auto;
+            text-align: center;
+            margin: 10px;
+        }
+        #midDiv{
+            border: 10px solid palevioletred;
+            padding: 10px;
+            width: 0 auto;
+            text-align: center;
+            margin: 10px;
+        }
+        #innerDiv{
+            border: 10px solid pink;
+            padding: 10px;
+            width: 0 auto;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="topDiv"> Outer Div
+        <div id="midDiv"> Mid Div
+            <div id="innerDiv">
+                Inner Div
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //event bubbling
+         document.getElementById('topDiv').addEventListener('click', () => {
+            console.log('Outer div has been clicked');         
+        })
+        document.getElementById('midDiv').addEventListener('click', () => {
+            console.log('Mid div has been clicked');         
+        })
+        document.getElementById('innerDiv').addEventListener('click', () => {
+            console.log('Inner div has been clicked');         
+        })
+
+        //event capturing
+        document.getElementById('topDiv').addEventListener('click', () => {
+            console.log('Outer div has been clicked');         
+        }, true)
+        document.getElementById('midDiv').addEventListener('click', () => {
+            console.log('Mid div has been clicked');         
+        }, true)
+        document.getElementById('innerDiv').addEventListener('click', () => {
+            console.log('Inner div has been clicked');         
+        }, true)
+    </script>
+</body>
+</html>
