@@ -59,13 +59,13 @@ cook.call(dish, "rice", "chicken"); //arguments separately in string
 cook.apply(dish, ["rice", "veggies"]); //arguments in an array
 
 const cookBiryaniForAdam = cook.bind(dish, "rice", "mushrooms"); //bind returns a function
-console.log(cookBiryaniForAdam());
+cookBiryaniForAdam()
 
 //event delegation example
 
-let items = ["Item 1", "Item 2", "Item 3"];
-items.forEach(() => {
-  let li = document.createElement("li");
-  li.innerText = "Item";
-  document.querySelector("ul").appendChild(li);
-});
+// let items = ["Item 1", "Item 2", "Item 3"];
+// items.forEach(() => {
+//   let li = document.createElement("li");
+//   li.innerText = "Item";
+//   document.querySelector("ul").appendChild(li);
+// });
