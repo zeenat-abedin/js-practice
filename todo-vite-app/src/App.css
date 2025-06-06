@@ -55,3 +55,15 @@ body {
   align-items: center;
   border-bottom: 1px solid #ddd;
 }
+
+.delete-button {
+  background: none;
+  border: none;
+  color: crimson;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  color: darkred;
+}
