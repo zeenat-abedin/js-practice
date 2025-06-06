@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import { TodoItem } from './TodoItem';
+import TodoItem from './TodoItem';
 
 function App() {
   const [input, setInput] = useState('');
   const [todos, setTodos] = useState([]);
 
-  function handleInput(e){
-    console.log(e.target.value);
+  function handleInput(e) {
     setInput(e.target.value)
   }
 
@@ -51,13 +50,12 @@ function App() {
       </div>
       <ul className='todo-list'>
        {
-        todos.map(
-          todo =>
+        todos.map(todo =>
            <TodoItem
             key={todo.id}
             todo={todo}
-            toggleTodo={toggleTodo}
-            deleteTodo={deleteTodo}
+            onToggle={toggleTodo}
+            onDelete={deleteTodo}
           />
         )
        }

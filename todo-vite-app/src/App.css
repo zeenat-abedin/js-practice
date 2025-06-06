@@ -23,3 +23,35 @@ body {
   display: flex;
   gap: 10px;
 }
+
+.todo-input{
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.add-button{
+  background-color: #4682b4;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #1e6eb1;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}

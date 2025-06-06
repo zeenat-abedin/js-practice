@@ -1,10 +1,12 @@
 import React from 'react'
 
-export const TodoItem = ({todo, toggleTodo, deleteTodo}) => {
+const TodoItem = ({todo, onToggle, onDelete}) => {
   return (
     <li className='todo-item'>
-        <span onClick={toggleTodo}>{todo.text}</span>
-        <button onClick={deleteTodo}>Delete</button>
+        <span onClick={() => onToggle(todo.id)}>{todo.text}</span>
+        <button onClick={() => onDelete(todo.id)}>Delete</button>
     </li>
   )
 }
+
+export default TodoItem;
