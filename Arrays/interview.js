@@ -27,3 +27,24 @@ copied.hobbies.push('Traveling')
 
 console.log('Original:', original);
 console.log('Copied:', copied);
+
+//Throttle vs Debounce – Write custom throttle() and debounce() functions.
+
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+function throttle(fn, delay) {
+  let last = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - last >= delay) {
+      last = now;
+      fn.apply(this, args);
+    }
+  };
+}
