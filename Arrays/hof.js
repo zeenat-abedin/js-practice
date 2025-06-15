@@ -56,6 +56,17 @@ const findMaximum = arr.reduce((max, curr) => {
 console.log(findMax([ 5, 1, 3, 2, 6 ]));
 console.log(findMaximum);
 
+const users = [
+   { firstName: 'Zeenat', lastName: 'Abedin', age: 25},
+   { firstName: 'Akshay', lastName: 'Saini', age: 26},
+   { firstName: 'Donald', lastName: 'Trump', age: 75},
+   { firstName: 'Hitesh', lastName: 'Chowdhury', age: 45},
+   { firstName: 'Deepika', lastName: 'Padukone', age: 35},
+]
+
+const output = users.map(user => user.firstName + ' ' + user.lastName)
+console.log(output);
+
 
 // 1. map method is used when we want transformation of whole array.
 // 2. filter is used when we want to filter the array to obtain required value.
