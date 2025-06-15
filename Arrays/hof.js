@@ -22,5 +22,13 @@ console.log(radius.map(area))
 console.log(calculate(radius, area));
 console.log(calculate(radius, circumference));
 
-const binary = radius.map(x => x.toString(2))
+const arr = [ 5, 1, 3, 2, 6 ]
+
+const binary = arr.map(x => x.toString(2))
 console.log(binary)
+
+const isOdd = arr.filter(num => num % 2)
+console.log(isOdd);
+
+const isEven = arr.filter(x => x % 2 === 0 )
+console.log(isEven);
