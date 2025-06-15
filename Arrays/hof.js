@@ -21,3 +21,6 @@ const calculate = function (radius, logic) {
 console.log(radius.map(area))
 console.log(calculate(radius, area));
 console.log(calculate(radius, circumference));
+
+const binary = radius.map(x => x.toString(2))
+console.log(binary)
