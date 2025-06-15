@@ -36,6 +36,27 @@ console.log(isEven);
 const findSum = arr.reduce((acc, curr) => acc + curr, 0)
 console.log(findSum);
 
+function findMax(arr) {
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+    }
+    return max
+}
+
+const findMaximum = arr.reduce((max, curr) => {
+    if (curr > max) {
+        max = curr
+    } 
+    return max
+}, 0)
+
+console.log(findMax([ 5, 1, 3, 2, 6 ]));
+console.log(findMaximum);
+
+
 // 1. map method is used when we want transformation of whole array.
 // 2. filter is used when we want to filter the array to obtain required value.
 // 3. reduce is used when we want to reduce the array to single value eg (max, min, avg, sum, difference etc).
