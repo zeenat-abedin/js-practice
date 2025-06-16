@@ -71,15 +71,14 @@ console.log(output);
 
 const reducedUsers = users.reduce((acc, curr) => {
     if(acc[curr.age]){
-        acc[curr.age] = ++acc[curr.age]
+        acc[curr.age] = ++acc[curr.age] //If the age already exists in the accumulator, increment the count.
     } else {
-        acc[curr.age] = 1
+        acc[curr.age] = 1 //If not, set it to 1 (i.e., the first user found with that age)
     }
     return acc;
 }, {})
 
 console.log(reducedUsers);
-
 
 // 1. map method is used when we want transformation of whole array.
 // 2. filter is used when we want to filter the array to obtain required value.
