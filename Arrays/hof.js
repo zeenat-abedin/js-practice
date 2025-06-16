@@ -80,6 +80,10 @@ const reducedUsers = users.reduce((acc, curr) => {
 
 console.log(reducedUsers);
 
+const filteredUsers = users.filter(user => user.age < 30).map(user => user.firstName)
+console.log(filteredUsers);
+
+
 // 1. map method is used when we want transformation of whole array.
 // 2. filter is used when we want to filter the array to obtain required value.
 // 3. reduce is used when we want to reduce the array to single value eg (max, min, avg, sum, difference etc).
