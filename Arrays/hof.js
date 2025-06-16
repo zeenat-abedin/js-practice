@@ -57,15 +57,28 @@ console.log(findMax([ 5, 1, 3, 2, 6 ]));
 console.log(findMaximum);
 
 const users = [
-   { firstName: 'Zeenat', lastName: 'Abedin', age: 25},
+   { firstName: 'Zeenat', lastName: 'Abedin', age: 26},
    { firstName: 'Akshay', lastName: 'Saini', age: 26},
    { firstName: 'Donald', lastName: 'Trump', age: 75},
-   { firstName: 'Hitesh', lastName: 'Chowdhury', age: 45},
+   { firstName: 'Hitesh', lastName: 'Chowdhury', age: 50},
    { firstName: 'Deepika', lastName: 'Padukone', age: 35},
 ]
 
 const output = users.map(user => user.firstName + ' ' + user.lastName)
 console.log(output);
+
+// acc = { 26:2, 50: 1, 35: 1, 75:1 }
+
+const reducedUsers = users.reduce((acc, curr) => {
+    if(acc[curr.age]){
+        acc[curr.age] = ++acc[curr.age]
+    } else {
+        acc[curr.age] = 1
+    }
+    return acc;
+}, {})
+
+console.log(reducedUsers);
 
 
 // 1. map method is used when we want transformation of whole array.
