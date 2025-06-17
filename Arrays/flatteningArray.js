@@ -3,18 +3,39 @@
 // For example, given an input like [[1, 2, [3]], 4].
 // The expected output would be [1, 2, 3, 4]
 
-function flatteningAnArray(value) {
-    let results = []
+// recursive solution
 
-    if (Array.isArray(value)){
-       value.forEach(val => {
-        results.push(...flatteningAnArray(val))
+function flattenArrayRecursive(arr) {
+    const result = []
+
+    if (Array.isArray(arr)){
+       arr.forEach(val => {
+        result.push(...flattenArrayRecursive(val))
        }) 
     } else {
-      results.push(value)
+      result.push(arr)
     }
-
-    return results
+    return result
 }
 
-console.log(flatteningAnArray([[1, 2, [3]], 4])); // [1, 2, 3, 4]
+console.log(flattenArrayRecursive([[1, 2, [3]], 4])); // [1, 2, 3, 4]
+
+// iterative solution
+
+function flattenArrayIterative(arr){
+    const stack = [...arr]
+    const result = [];
+
+    while(stack.length){
+        const value = stack.pop()
+
+        if (Array.isArray(value)) {
+           stack.push(...value) // If it's an array, push its elements back onto the stack
+        } else {
+            result.push(value)
+        }
+    }
+    return result.reverse() //since stack operates on LIFO approach
+}
+
+console.log(flattenArrayIterative([[1, 2, [3]], 4])); // [1, 2, 3, 4]
