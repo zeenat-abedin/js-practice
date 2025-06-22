@@ -10,7 +10,7 @@ function flattenArrayRecursive(arr) {
 
     if (Array.isArray(arr)){
        arr.forEach(val => {
-        result.push(...flattenArrayRecursive(val))
+        result.push(...flattenArrayRecursive(val))  // Recursively flatten the element and concatenate it with the results array
        }) 
     } else {
       result.push(arr)
