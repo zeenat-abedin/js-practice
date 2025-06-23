@@ -4,6 +4,8 @@
   "description": "This is namaste react copy by Zeenat Abedin",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -22,6 +24,7 @@
     "parcel": "^2.15.4"
   },
   "dependencies": {
+    "@parcel/source-map": "^2.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
