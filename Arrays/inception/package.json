@@ -12,12 +12,7 @@
     "type": "git",
     "url": "https://github.com/zeenat-abedin"
   },
-  "keywords": [
-    "react",
-    "namaste-react",
-    "zeenat",
-    "abedin"
-  ],
+  "keywords": [],
   "author": "Zeenat Abedin",
   "license": "ISC",
   "devDependencies": {
