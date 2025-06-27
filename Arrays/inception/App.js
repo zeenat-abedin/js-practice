@@ -29,6 +29,7 @@ const RestaurantCard = () => {
             <h3>Meghana Foods</h3>
             <h4>Biryani, North Indian, Asian</h4>
             <h4>4.3 stars</h4>
+            <h4>38 minutes</h4>
         </div>
     )
 }
