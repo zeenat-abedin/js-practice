@@ -14,29 +14,43 @@ function App() {
   const [startIndex, setStartIndex ] = useState(0)
   const totalHeight = array.length * ROW_HEIGHT
 
+  const handleScroll = () => {
+    const scrollTop = containerRef.current.scrollTop
+    const newStartIndex = Math.floor(scrollTop / ROW_HEIGHT)
+    setStartIndex(newStartIndex)
+  }
 
-
- const visibleData = array.slice(startIndex, startIndex + VISIBLE_ROWS);
+  const visibleData = array.slice(startIndex, startIndex + VISIBLE_ROWS);
+ 
   return (
-    <>
-      <h1>React Virtualization</h1>
-      <table style={{ height: totalHeight }}>
-        <thead>
-          <tr>
-            <td><strong>Name</strong></td>
-            <td><strong>Value</strong></td>
-          </tr>
-        </thead>
-        <tbody>
-          {visibleData.map((item) => 
+    <div 
+      className="App"
+      ref={containerRef}
+      onScroll={handleScroll}
+      style={{
+        overflowY: 'auto',
+        height: VISIBLE_ROWS * ROW_HEIGHT,
+      }}
+     >
+      <div style={{ height: totalHeight , position: 'relative'}}>
+        <table style={{ position: 'absolute', top: startIndex * ROW_HEIGHT }}>
+          <thead>
             <tr>
-              <td>{item.name}</td>
-              <td>{item.value}</td>
+              <td><strong>Name</strong></td>
+              <td><strong>Value</strong></td>
             </tr>
-          )}
-        </tbody>
-      </table>
-    </>
+          </thead>
+          <tbody>
+            {visibleData.map((item, index) => 
+              <tr key={startIndex + index}>
+                <td>{item.name}</td>
+                <td>{item.value}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
   )
 }
 
