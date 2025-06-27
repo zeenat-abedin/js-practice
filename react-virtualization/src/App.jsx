@@ -1,7 +1,7 @@
 import {useState, useRef } from 'react';
 import './App.css'
 
-const ROW_HEIGHT = "30px";
+const ROW_HEIGHT = 30; // each row’s height in px
 const VISIBLE_ROWS = 10;
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
       style={{
         overflowY: 'auto',
         height: VISIBLE_ROWS * ROW_HEIGHT,
+        position: 'relative'
       }}
      >
       <div style={{ height: totalHeight , position: 'relative'}}>
@@ -42,7 +43,7 @@ function App() {
           </thead>
           <tbody>
             {visibleData.map((item, index) => 
-              <tr key={startIndex + index}>
+              <tr key={startIndex + index} style={{ height: ROW_HEIGHT }}>
                 <td>{item.name}</td>
                 <td>{item.value}</td>
               </tr>
