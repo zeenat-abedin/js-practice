@@ -29,6 +29,11 @@
     border: 1px solid black;
 }
 
+.res-card:hover{
+    cursor: pointer;
+    border: 1px solid black
+}
+
 .res-logo{
     margin: 5px;
     width: 190px;
