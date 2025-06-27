@@ -29,6 +29,11 @@
     border: 1px solid black;
 }
 
+.res-logo{
+    padding: 5px;
+    width: 100%;
+}
+
 .search {
     padding: 10px;
 }
