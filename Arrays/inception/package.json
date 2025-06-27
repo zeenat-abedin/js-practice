@@ -1,29 +1,46 @@
 {
-  "name": "inception",
+  "name": "namaste-react",
   "version": "1.0.0",
-  "description": "This is namaste react copy by Zeenat Abedin",
-  "main": "App.js",
+  "description": "This is Namaste React by Zeenat Abedin",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeenat-abedin"
+    "url": "git+https://github.com/namastedev/namaste-react.git"
   },
   "keywords": [],
   "author": "Zeenat Abedin",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namastedev/namaste-react/issues"
+  },
+  "homepage": "https://github.com/namastedev/namaste-react#readme",
   "devDependencies": {
-    "parcel": "^2.15.4"
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "babel-jest": "^29.6.2",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.24",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.2"
   },
   "dependencies": {
-    "@parcel/source-map": "^2.1.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@reduxjs/toolkit": "^1.9.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.11.2"
   },
-  "browsersList": [
+  "browserslist": [
     "last 2 versions"
   ]
 }
