@@ -2,7 +2,7 @@ const resList = [
   {
     type: "restaurant",
     data: {
-      id: "178387",
+      id: "178389",
       name: "Hyderabadi Handi Biryani",
       city: "1",
       slugs: {
@@ -12,17 +12,10 @@ const resList = [
       locality: "CKB Layout",
       areaName: "Marathahalli",
       costForTwo: "₹400 for two",
-      cuisines: [
-        "Biryani",
-        "North Indian",
-        "Desserts",
-        "Tandoor",
-        "Hyderabadi",
-        "Andhra",
-      ],
+      cuisine:  "Biryani",
       avgRating: 4,
       feeDetails: {
-        restaurantId: "178387",
+        restaurantId: "178389",
         title: "Delivery Charge",
         amount: "0",
       },
@@ -55,14 +48,7 @@ const resList = [
       locality: "CKB Layout",
       areaName: "Marathahalli",
       costForTwo: "₹400 for two",
-      cuisines: [
-        "Biryani",
-        "North Indian",
-        "Desserts",
-        "Tandoor",
-        "Hyderabadi",
-        "Andhra",
-      ],
+      cuisine:"Tandoor",
       avgRating: 4,
       feeDetails: {
         restaurantId: "178387",
