@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState } from "react";
+import "../index.css";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resList);
