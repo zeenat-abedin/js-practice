@@ -1,10 +1,15 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState } from "react";
-import "../index.css";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+
+  if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
+
   return (
     <div className="body">
       <div className="filter">
@@ -13,7 +18,9 @@ const Body = () => {
           onClick={() => {
             console.log("Filter button clicked");
           }}
-         >Top Rated Restaurants</button>
+         >
+         Top Rated Restaurants
+        </button>
       </div>
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
