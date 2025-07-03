@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -9,6 +9,16 @@ const Body = () => {
   if (listOfRestaurants.length === 0) {
     return <Shimmer />;
   }
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+  
+  const fetchData = async () => {
+    const res = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9536392&lng=77.695126&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const data = await res.json();
+    setListOfRestaurants(data);
+  };
 
   return (
     <div className="body">
