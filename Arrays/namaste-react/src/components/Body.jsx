@@ -31,7 +31,7 @@ const Body = () => {
             onChange={(e) => setSearchText(e.target.value)} 
             className="search-box"
           />
-          <button onClick={() => console.log("Search button clicked")}>Search</button>
+          <button onClick={() => console.log(searchText)}>Search</button>
         </div>
         <button
           className="filter-btn"
