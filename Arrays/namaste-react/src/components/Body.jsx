@@ -26,6 +26,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    
 
     setListOfRestaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -61,12 +62,15 @@ const Body = () => {
 
         </div>
         <button
-          className="filter-btn"
-          onClick={() => {
-            console.log("Filter button clicked");
-          }}
-        >
-          Top Rated Restaurants
+            className="px-4 py-2 bg-gray-100 rounded-lg"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setFilteredRestaurant(filteredList);
+            }}
+          >
+            Top Rated Restaurants
         </button>
       </div>
       <div className="res-container">
