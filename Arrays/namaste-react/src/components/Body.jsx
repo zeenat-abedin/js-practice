@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -8,15 +7,15 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+   useEffect(() => {
+    fetchData();
+  }, [])
+
   if (listOfRestaurants.length === 0) {
     return <Shimmer />;
   }
 
   // Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
-
-  useEffect(() => {
-    fetchData();
-  }, [])
 
   const fetchData = async () => {
     const data = await fetch(
@@ -72,7 +71,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants?.map((restaurant) => (
+        {filteredRestaurant?.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
