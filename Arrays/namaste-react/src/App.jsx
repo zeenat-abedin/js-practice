@@ -19,11 +19,13 @@ const AppRouter = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <Error />,
+    children: [
+      {
+        path: "/about",
+        element: <About />
+      },
+    ]
   },
-  {
-    path: "/about",
-    element: <About />
-  }
 ])
 
 export default AppRouter
