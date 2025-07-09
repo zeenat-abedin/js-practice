@@ -10,8 +10,9 @@ function RestaurantMenu() {
 
     const fetchMenu = async () => {
         const res = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=");
-        const data = await res.json();
-        console.log(data);
+        const json = await res.json();
+        console.log(json);
+        setResInfo(json.data);
     }
     if (resInfo === null) return <Shimmer />;
     return (
