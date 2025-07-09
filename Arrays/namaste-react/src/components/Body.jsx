@@ -7,14 +7,6 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-   useEffect(() => {
-    fetchData();
-  }, [])
-
-  if (listOfRestaurants.length === 0) {
-    return <Shimmer />;
-  }
-
   // Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
 
   const fetchData = async () => {
@@ -32,6 +24,14 @@ const Body = () => {
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body">
