@@ -25,6 +25,7 @@ function RestaurantMenu() {
                 <li>Biryani</li>
                 <li>Burgers</li>
                 <li>Diet Coke</li>
+                <li>Paneer Tikka</li>
             </ul>
         </div>
     )
