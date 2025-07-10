@@ -14,7 +14,7 @@ const Body = () => {
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9304278&lng=77.678404&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    
+
     console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     setListOfRestaurants(
@@ -59,15 +59,15 @@ const Body = () => {
 
         </div>
         <button
-            className="px-4 py-2 bg-gray-100 rounded-lg"
-            onClick={() => {
-              const filteredList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4
-              );
-              setFilteredRestaurant(filteredList);
-            }}
-          >
-            Top Rated Restaurants
+          className="px-4 py-2 bg-gray-100 rounded-lg"
+          onClick={() => {
+            const filteredList = listOfRestaurants.filter(
+              (res) => res.info.avgRating > 4
+            );
+            setFilteredRestaurant(filteredList);
+          }}
+        >
+          Top Rated Restaurants
         </button>
       </div>
       <div className="res-container">
