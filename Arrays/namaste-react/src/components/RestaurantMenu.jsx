@@ -5,12 +5,12 @@ function RestaurantMenu() {
     const [resInfo, setResInfo] = useState(null);
 
     useEffect(() => {
-      fetchMenu();
+        fetchMenu();
     }, [])
 
     const fetchMenu = async () => {
         const res = await fetch("/api?id=221738");
-        
+
 
         const json = await res.json();
         console.log(json);
