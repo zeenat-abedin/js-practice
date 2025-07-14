@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   );
 
   try {
-    const data = await response.json(); // will throw if response is HTML
+    const data = await response.json();
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(data);
   } catch (error) {
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const text = await response.text();
     res.status(500).json({
       error: "Failed to parse JSON. Swiggy may have blocked the request.",
-      rawResponse: text.slice(0, 300), // show start of HTML
+      rawResponse: text.slice(0, 300),
     });
   }
 }
