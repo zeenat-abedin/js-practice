@@ -10,8 +10,6 @@ function RestaurantMenu() {
 
     const fetchMenu = async () => {
         const res = await fetch("/api?id=221738");
-
-
         const json = await res.json();
         console.log(json);
         setResInfo(json.data);
