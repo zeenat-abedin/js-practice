@@ -2,6 +2,7 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
@@ -27,6 +28,9 @@ const RestaurantMenu = () => {
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
+
+    const onlineStatus = useOnlineStatus();
+    if(onlineStatus === false) return <h1>Looks like you're offline! Please check your internet connection</h1>;
 
   return (
     <div className="text-center">
