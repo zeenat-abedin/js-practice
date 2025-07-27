@@ -4,13 +4,11 @@ import { useState } from "react";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
+  const [showIndex, setShowIndex] = useState(null);
   const { resId } = useParams();
 
   const dummy = "Dummy Data";
-
   const resInfo = useRestaurantMenu(resId);
-
-  const [showIndex, setShowIndex] = useState(null);
 
   if (resInfo === null) return <Shimmer />;
 
