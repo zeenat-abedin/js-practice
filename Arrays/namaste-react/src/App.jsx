@@ -6,6 +6,7 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Grocery from "./components/Grocery";
 
 function App() {
   return (
@@ -33,6 +34,10 @@ const AppRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />
+      },
+      {
+        path: "/grocery",
+        element: <Grocery />
       },
       {
         path: "/restaurant/:resId",
