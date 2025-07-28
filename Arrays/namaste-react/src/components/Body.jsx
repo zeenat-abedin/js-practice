@@ -45,7 +45,6 @@ const Body = () => {
           />
           <button
             onClick={() => {
-              // Filter the restaurant cards and update the UI
               console.log(searchText);
 
               const filteredRestaurant = listOfRestaurants.filter((res) =>
