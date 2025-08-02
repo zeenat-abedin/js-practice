@@ -45,8 +45,6 @@ const Body = () => {
           />
           <button
             onClick={() => {
-              console.log(searchText);
-
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
