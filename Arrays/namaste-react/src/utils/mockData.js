@@ -62,13 +62,6 @@ const resList = [
         opened: true,
       },
       badges: {},
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        discountTag: "FLAT DEAL",
-        logoCtx: {
-          text: "BENEFITS",
-        },
-      },
     },
   },
 ];
