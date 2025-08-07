@@ -3,7 +3,7 @@ import { MENU_API } from "./constants";
 
 const useRestaurantMenu = (resId) => {
     const [resInfo, setResInfo] = useState(null);
-    //fetch restaurant menu data
+    
     useEffect(()=>{
         fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
