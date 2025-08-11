@@ -10,7 +10,6 @@ const RestaurantMenu = () => {
 
   const dummy = "Dummy Data";
   const resInfo = useRestaurantMenu(resId);
-
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
