@@ -17,8 +17,10 @@ const RestaurantMenu = () => {
 
   const itemCards =
     resInfo?.cards &&
-      resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards
-      ? resInfo.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards
+    resInfo.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+      ?.itemCards
+      ? resInfo.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card
+          .itemCards
       : [];
 
   const categories =
@@ -30,7 +32,10 @@ const RestaurantMenu = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const onlineStatus = useOnlineStatus();
-  if (onlineStatus === false) return <h1>Looks like you're offline! Please check your internet connection</h1>;
+  if (onlineStatus === false)
+    return (
+      <h1>Looks like you're offline! Please check your internet connection</h1>
+    );
 
   return (
     <div className="text-center">
