@@ -8,9 +8,9 @@ export default async function handler(req, res) {
     {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-        "Accept": "application/json",
-        "Referer": "https://www.swiggy.com/",
-        "Origin": "https://www.swiggy.com",
+        Accept: "application/json",
+        Referer: "https://www.swiggy.com/",
+        Origin: "https://www.swiggy.com",
       },
     }
   );
