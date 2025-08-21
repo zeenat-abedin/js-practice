@@ -8,7 +8,7 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 
-const Grocery = lazy(() => import("./components/Grocery"))
+const Grocery = lazy(() => import("./components/Grocery"));
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Outlet />
     </div>
-  )
+  );
 }
 
 const AppRouter = createBrowserRouter([
@@ -27,26 +27,26 @@ const AppRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />
+        element: <Body />,
       },
       {
         path: "/about",
-        element: <About />
+        element: <About />,
       },
       {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: "/grocery",
-        element: <Grocery />
+        element: <Grocery />,
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenu />
-      }
-    ]
+        element: <RestaurantMenu />,
+      },
+    ],
   },
-])
+]);
 
-export default AppRouter
+export default AppRouter;
