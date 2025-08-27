@@ -9,15 +9,11 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img
-          className="logo"
-          src={LOGO_URL}
-          alt="logo-img"
-        />
+        <img className="logo" src={LOGO_URL} alt="logo-img" />
       </div>
       <div className="nav-items">
         <ul>
-          <li>Online Status: {onlineStatus ? "✅": "🔴"}</li>
+          <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>
