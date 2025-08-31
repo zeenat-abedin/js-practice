@@ -1,4 +1,5 @@
 function findSecondLargest(arr) {
+  if (arr.length < 2) return null;
   let firstLargest = -Infinity;
   let secondLargest = -Infinity;
   for (let i = 0; i < arr.length; i++) {
@@ -12,4 +13,4 @@ function findSecondLargest(arr) {
   return secondLargest;
 }
 
-console.log(findSecondLargest([4, 9, 0, 2, 8, 7, 1, 10]));
+console.log(findSecondLargest([4]));
