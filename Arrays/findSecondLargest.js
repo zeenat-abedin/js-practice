@@ -13,4 +13,4 @@ function findSecondLargest(arr) {
   return secondLargest;
 }
 
-console.log(findSecondLargest([4]));
+console.log(findSecondLargest([4, 9, 0, 2, 8, 7, 1, 10]));
