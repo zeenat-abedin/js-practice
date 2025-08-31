@@ -1,5 +1,7 @@
 function findSecondLargest(arr) {
-  if (arr.length < 2) return null;
+  if (arr.length < 2) {
+    return "Array should have atleast 2 elements";
+  }
   let firstLargest = -Infinity;
   let secondLargest = -Infinity;
   for (let i = 0; i < arr.length; i++) {
