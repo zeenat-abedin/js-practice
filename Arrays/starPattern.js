@@ -11,7 +11,7 @@ for (let i = 0; i < n; i++) {
 for (let i = 0; i < n; i++) {
   let row = "";
   for (let j = 0; j < i + 1; j++) {
-    row = row + (j+1)
+    row = row + (j + 1);
   }
-  console.log(row)
+  console.log(row);
 }
