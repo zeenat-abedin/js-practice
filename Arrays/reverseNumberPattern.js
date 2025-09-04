@@ -1,5 +1,11 @@
 let n = 5;
 
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
 for (let i = 0; i < 5; i++) {
   let row = "";
   for (let j = 0; j < n - i; j++) {
@@ -7,6 +13,12 @@ for (let i = 0; i < 5; i++) {
   }
   console.log(row);
 }
+
+//     *
+//    **
+//   ***
+//  ****
+// *****
 
 for (let i = 0; i < n; i++) {
     let row = ""
