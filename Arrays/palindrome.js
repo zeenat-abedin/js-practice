@@ -14,9 +14,12 @@ function checkIfPalindrome(num) {
 
   if (rev == number) return true;
   else return false;
+  //alternative for the last two lines
+  // return rev = number
 }
 
 console.log(checkIfPalindrome(2552));
 console.log(checkIfPalindrome(552));
 console.log(checkIfPalindrome(121));
 console.log(checkIfPalindrome(-2552));
+
