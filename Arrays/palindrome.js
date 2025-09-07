@@ -12,10 +12,10 @@ function checkIfPalindrome(num) {
     num = Math.floor(num / 10);
   }
 
-  if (rev == number) return true;
-  else return false;
+  // if (rev == number) return true;
+  // else return false;
   //alternative for the last two lines
-  // return rev = number
+  return rev = number
 }
 
 console.log(checkIfPalindrome(2552));
