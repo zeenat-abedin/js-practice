@@ -3,6 +3,8 @@
 // be kept the same. Then return the number of unique elements in nums.
 // Note: In DSA whenever you see the word non-decreasing, always know it will have duplicates
 
+// 2 pointer approach
+
 function removeDuplicatesFromSortedArray(nums) {
   let x = 0;
   for (let i = 0; i < nums.length; i++) {
