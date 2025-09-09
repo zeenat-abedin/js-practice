@@ -13,7 +13,7 @@ function removeDuplicatesFromSortedArray(nums) {
       nums[x] = nums[i];
     }
   }
-  return x + 1;
+  return x + 1; //returning the total no. of unique elements
 }
 
-console.log(removeDuplicatesFromSortedArray(0, 0, 1, 1, 1, 2, 2, 3, 3, 4));
+console.log(removeDuplicatesFromSortedArray([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
