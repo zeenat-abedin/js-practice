@@ -6,7 +6,7 @@
 // 2 pointer approach
 
 function removeDuplicatesFromSortedArray(nums) {
-  let x = 0;
+  let x = 0; //here x indicates the unique element
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] > nums[x]) {
       x = x + 1;
