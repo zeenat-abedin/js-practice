@@ -16,4 +16,4 @@ function removeElement(nums, val) {
     return x;
 }
 
-console.log(removeElement([0, 0, 1, 1, 1, 2, 2, 3, 3, 4], 3)) //8 since if we ignore val 3, then we have 8 elements in the array
+console.log(removeElement([0, 0, 1, 1, 2, 2, 3, 3, 4], 3)) //8 since if we ignore val 3, then we have 8 elements in the array
