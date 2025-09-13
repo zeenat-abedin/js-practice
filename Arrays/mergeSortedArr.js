@@ -8,16 +8,16 @@ function mergeSortedArray(nums1, m, nums2, n) {
   let p2 = 0; //pointer 2
 
   for (let i = 0; i < m + n; i++) {
-    if (p2 >=n || (p1 < m && nums1Copy[p1] < nums2[p2])) {
-        nums1[i] = nums1Copy[p1];
-        p1++
+    if (p2 >= n || (p1 < m && nums1Copy[p1] < nums2[p2])) {
+      nums1[i] = nums1Copy[p1];
+      p1++;
     } else {
-        nums1[i] = nums2[p2]
-        p2++
+      nums1[i] = nums2[p2];
+      p2++;
     }
   }
-  return nums1
+  return nums1;
 }
 
-console.log(mergeSortedArray([1,2,3,0,0,0], 3, [2,5,6], 3))
-console.log(mergeSortedArray([1], 1, [], 0))
+console.log(mergeSortedArray([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+console.log(mergeSortedArray([1], 1, [], 0));
