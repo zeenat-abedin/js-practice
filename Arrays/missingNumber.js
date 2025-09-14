@@ -1,3 +1,5 @@
+// leetcode 268
+
 function missingNumber(nums) {
   let n = nums.length;
   let totalSum = (n * (n + 1)) / 2;
