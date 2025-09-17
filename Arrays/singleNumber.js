@@ -28,11 +28,11 @@ console.log(singleNumber([1]));
 // another solution using XOR where space complexity isn't required,
 
 function singleNumberSolutionTwo(nums) {
-    let xor = 0;
-    for (let i = 0; i < nums.length; i++) {
-       xor = xor ^ nums[i]
-    }
-    return xor
+  let xor = 0;
+  for (let i = 0; i < nums.length; i++) {
+    xor = xor ^ nums[i];
+  }
+  return xor;
 }
 
 console.log(singleNumberSolutionTwo([2, 2, 1]));
