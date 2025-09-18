@@ -20,7 +20,7 @@ function countNegatives(arr) {
       count++;
     }
   }
-  return count
+  return count;
 }
 
 console.log(countNegatives([2, -9, 17, 0, 1, -10, -4, 8]));
