@@ -25,7 +25,7 @@ console.log(singleNumber([1]));
 // time complexity -> o(n)
 // space complexity -> o(n) [since 0(n/2) is same as o(n)]
 
-// another solution using XOR where space complexity isn't required,
+// another solution using XOR where space complexity isn't required, (more optimal solution)
 
 function singleNumberSolutionTwo(nums) {
   let xor = 0;
