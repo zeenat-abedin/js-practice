@@ -2,8 +2,7 @@
 //Infinite recuursion leads to STACK OVERFLOW.
 
 function fun(num) {
-  if (num == 0) {
-    //base case
+  if (num == 0) {    //base case
     return;
   }
   console.log(num);
