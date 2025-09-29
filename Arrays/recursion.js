@@ -2,6 +2,8 @@
 //an infinite loop
 //Infinite recuursion leads to STACK OVERFLOW.
 
+//sum of first n numbers
+
 function sum(n) {
   if (n == 0) return 0; //base case
   return n + sum(n-1)
