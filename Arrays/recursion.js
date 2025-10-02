@@ -2,7 +2,7 @@
 //into an infinite loop
 //Infinite recuursion leads to STACK OVERFLOW.
 
-//sum of first n natura; numbers
+//sum of first n natural numbers
 
 function sum(n) {
   if (n == 0) return 0; //base case
