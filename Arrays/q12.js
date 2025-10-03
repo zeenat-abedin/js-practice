@@ -12,20 +12,20 @@ setTimeout(() => {
 
 // const data = {name: 'John', age: 30}
 
-function fetchData(){
-    return new Promise((resolve, reject) => {
-        setTimeout(()=> {
-            resolve(data)
-        }, 2000)
-    })
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(data)
+    }, 2000)
+  })
 }
 
 fetchData().then(
-    (data) => {
-        console.log('Data:', data)
-    }).catch((err) => {
-        console.log('Error:', err);
-    })
+  (data) => {
+    console.log('Data:', data)
+  }).catch((err) => {
+    console.log('Error:', err);
+  })
 
 //async and await example
 
@@ -47,8 +47,8 @@ fetchUserData();
 
 //call, apply and bind example
 
-const dish = { 
-    dish: "Biryani"
+const dish = {
+  dish: "Biryani"
 };
 
 function cook(ing1, ing2) {
