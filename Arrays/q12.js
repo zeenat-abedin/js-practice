@@ -60,12 +60,3 @@ cook.apply(dish, ["rice", "veggies"]); //arguments in an array
 
 const cookBiryaniForAdam = cook.bind(dish, "rice", "mushrooms"); //bind returns a function
 cookBiryaniForAdam()
-
-//event delegation example
-
-// let items = ["Item 1", "Item 2", "Item 3"];
-// items.forEach(() => {
-//   let li = document.createElement("li");
-//   li.innerText = "Item";
-//   document.querySelector("ul").appendChild(li);
-// });
