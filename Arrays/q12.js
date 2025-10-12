@@ -10,7 +10,7 @@ setTimeout(() => {
 
 //promise example
 
-// const data = {name: 'John', age: 30}
+const data = {name: 'John', age: 30}
 
 function fetchData() {
   return new Promise((resolve, reject) => {
