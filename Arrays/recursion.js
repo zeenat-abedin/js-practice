@@ -9,4 +9,4 @@ function sum(n) {
   return n + sum(n-1)
 }
 
-console.log(sum(6)); //21
+console.log(sum(6)); //(6+5+4+3+2+1 = 21)
