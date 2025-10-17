@@ -45,7 +45,8 @@ function factorial(n) {
 
 console.log(factorial(5));
 
-//4. Write a Javascript function to find the count of a letter in a string (example: console.log(fun('Connect', 'c')) c come 2times)
+//4. Write a Javascript function to find the count of a letter in a string
+// (example: console.log(fun('Connect', 'c')) c come 2times)
 
 function countLetterOccurrences(string, letter) {
   let count = 0;
