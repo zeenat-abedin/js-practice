@@ -15,3 +15,9 @@ console.log("strNew", strNew.replace("lo", "p"))
 
 let replaceAllStr = "donald"
 console.log("replaceAllStr", replaceAllStr.replaceAll("d", "c"))
+
+//uppercase
+
+let strFormatted = "urban junkie"
+console.log("strFormatted", strFormatted.toUpperCase())
+
