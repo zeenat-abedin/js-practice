@@ -10,3 +10,8 @@ console.log("newstr", newStr)
 
 let strNew = "hello"
 console.log("strNew", strNew.replace("lo", "p"))
+
+//replaceAll
+
+let replaceAllStr = "donald"
+console.log("replaceAllStr", replaceAllStr.replaceAll("d", "c"))
