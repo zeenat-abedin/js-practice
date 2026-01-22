@@ -2,22 +2,37 @@
 
 //slice 
 
-let str = "hello"
-let newStr = str.slice(0,3)
+const str = "hello"
+const newStr = str.slice(0,3)
 console.log("newstr", newStr)
 
 //replace
 
-let strNew = "hello"
+const strNew = "hello"
 console.log("strNew", strNew.replace("lo", "p"))
 
 //replaceAll
 
-let replaceAllStr = "donald"
+const replaceAllStr = "donald"
 console.log("replaceAllStr", replaceAllStr.replaceAll("d", "c"))
 
 //uppercase
 
-let strFormatted = "urban junkie"
+const strFormatted = "urban junkie"
 console.log("strFormatted", strFormatted.toUpperCase())
+
+//lowercase
+
+const strNew2 = "EAT THAT FROG!"
+console.log("strNew2", strNew2.toLowerCase())
+
+//concat
+
+const str1 = "Zeenat"
+const str2 = "Abedin"
+
+const concatenedStr = str1 + " " + str2
+console.log("concatenedStr", concatenedStr)
+
+
 
