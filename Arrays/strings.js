@@ -28,8 +28,8 @@ console.log("strNew2", strNew2.toLowerCase())
 
 //concat
 
-const str1 = "Zeenat"
-const str2 = "Abedin"
+const str1 = "Brad"
+const str2 = "Traversy"
 
 const concatenedStr = str1 + " " + str2
 console.log("concatenedStr", concatenedStr)
