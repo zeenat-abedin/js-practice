@@ -34,5 +34,11 @@ const str2 = "Traversy"
 const concatenedStr = str1 + " " + str2
 console.log("concatenedStr", concatenedStr)
 
+//startsWith
+
+const text = "Hello World"
+const findString = text.startsWith("Hello")
+console.log(findString)
+
 
 
