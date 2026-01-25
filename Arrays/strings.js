@@ -40,5 +40,8 @@ const text = "Hello World"
 const findString = text.startsWith("Hello")
 console.log('strings:', findString);
 
-
+//strings --> immutable
+const str3 = "hello"
+str3[0] = "y"
+console.log('str3', str3);
 
