@@ -38,7 +38,7 @@ console.log("concatenedStr", concatenedStr)
 
 const text = "Hello World"
 const findString = text.startsWith("Hello")
-console.log(findString)
+console.log('strings:', findString);
 
 
 
