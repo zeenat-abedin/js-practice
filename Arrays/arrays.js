@@ -41,3 +41,10 @@ for(let i in items){
 }
 
 console.log(items);
+
+//pop
+
+const foodItems = ["potato", "mango", "litchi", "cake", "tomato"]
+
+const deletedItem = foodItems.pop()
+console.log('deletedItem:', deletedItem);
