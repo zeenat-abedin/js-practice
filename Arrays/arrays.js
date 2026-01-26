@@ -56,3 +56,15 @@ const stringifiedfoodItems = eateries.toString()
 
 console.log('stringifiedfoodItems:', stringifiedfoodItems);
 console.log('eateries:', eateries);
+
+//unshift adds to start
+
+const marvel_heroes = ["thor", "spiderman", "ironman"]
+marvel_heroes.unshift("shaktiman")
+console.log('marvel_heroes:', marvel_heroes);
+
+//shift deletes from the start
+
+const dc_heroes = ["superman", "batman", "Wonder Woman"]
+dc_heroes.shift("")
+console.log('dc_heroes:', dc_heroes);
