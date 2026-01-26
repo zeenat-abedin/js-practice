@@ -13,7 +13,7 @@ for (let i = 0; i < heroes.length; i++) {
     console.log('hero is', heroes[i]);
 }
 
-for (let hero of heroes){
+for (let hero of heroes) {
     console.log('hero', hero);
 }
 
@@ -23,7 +23,7 @@ const marksOfClass = [85, 97, 54, 37, 76, 60]
 
 let sum = 0
 
-for(let mark of marksOfClass){
+for (let mark of marksOfClass) {
     sum += mark
 }
 
@@ -35,7 +35,7 @@ console.log(`average marks of the class = ${average}`);
 
 const items = [250, 645, 300, 900, 50]
 
-for(let i in items){
+for (let i in items) {
     let offer = items[i] / 10;
     items[i] -= offer
 }
@@ -54,5 +54,5 @@ console.log('deletedItem:', deletedItem);
 const foodItems2 = ["potato", "mango", "litchi", "cake", "tomato"]
 const stringifiedfoodItems2 = foodItems2.toString()
 
-console.log('stringifiedfoodItems2:', stringifiedfoodItems2); 
+console.log('stringifiedfoodItems2:', stringifiedfoodItems2);
 console.log('foodItems2:', foodItems2);
