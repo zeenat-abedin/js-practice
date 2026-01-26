@@ -16,3 +16,17 @@ for (let i = 0; i < heroes.length; i++) {
 for (let hero of heroes){
     console.log('hero', hero);
 }
+
+//find average using for of
+
+const marksOfClass = [85, 97, 54, 37, 76, 60]
+
+let sum = 0
+
+for(let mark of marksOfClass){
+    sum += mark
+}
+
+const average = sum / marksOfClass.length
+
+console.log(`average marks of the class = ${average}`);
