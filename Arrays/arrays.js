@@ -51,8 +51,8 @@ console.log('deletedItem:', deletedItem);
 
 //toString returns the array in a string form but doesn't modify the original array
 
-const foodItems2 = ["potato", "mango", "litchi", "cake", "tomato"]
-const stringifiedfoodItems2 = foodItems2.toString()
+const eateries = ["potato", "mango", "litchi", "cake", "tomato"]
+const stringifiedfoodItems = eateries.toString()
 
-console.log('stringifiedfoodItems2:', stringifiedfoodItems2);
-console.log('foodItems2:', foodItems2);
+console.log('stringifiedfoodItems:', stringifiedfoodItems);
+console.log('eateries:', eateries);
