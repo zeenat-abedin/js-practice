@@ -70,3 +70,9 @@ const dc_heroes = ["superman", "batman", "Wonder Woman"]
 const shifted = dc_heroes.shift("")
 console.log('dc_heroes:', dc_heroes);
 console.log('shifted:', shifted);
+
+//splice (for adding or removing elements) [idx, deletion count, nums to be added]
+
+const arr = [1, 2, 3, 4, 5, 6, 7]
+arr.splice(2, 2, 101, 102)
+console.log('arrays:', arr);
