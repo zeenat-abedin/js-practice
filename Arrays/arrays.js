@@ -12,3 +12,7 @@ const heroes = ["ironman", "spiderman", "hulk", "shaktiman", "superman"]
 for (let i = 0; i < heroes.length; i++) {
     console.log('hero is', heroes[i]);
 }
+
+for (let hero of heroes){
+    console.log('hero', hero);
+}
