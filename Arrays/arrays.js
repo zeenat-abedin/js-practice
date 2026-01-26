@@ -60,11 +60,13 @@ console.log('eateries:', eateries);
 //unshift adds to start
 
 const marvel_heroes = ["thor", "spiderman", "ironman"]
-marvel_heroes.unshift("shaktiman")
+const unshifted = marvel_heroes.unshift("shaktiman")
 console.log('marvel_heroes:', marvel_heroes);
+console.log('unshifted:', unshifted);
 
 //shift deletes from the start
 
 const dc_heroes = ["superman", "batman", "Wonder Woman"]
-dc_heroes.shift("")
+const shifted = dc_heroes.shift("")
 console.log('dc_heroes:', dc_heroes);
+console.log('shifted:', shifted);
