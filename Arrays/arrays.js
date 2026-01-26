@@ -49,7 +49,7 @@ const foodItems = ["potato", "mango", "litchi", "cake", "tomato"]
 const deletedItem = foodItems.pop()
 console.log('deletedItem:', deletedItem);
 
-//toString returns the array in a string form but doesn't modify the original array
+//toString returns the array items in a string form but doesn't modify the original array
 
 const eateries = ["potato", "mango", "litchi", "cake", "tomato"]
 const stringifiedfoodItems = eateries.toString()
