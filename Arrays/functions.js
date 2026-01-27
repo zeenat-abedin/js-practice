@@ -1,7 +1,7 @@
 
 // function statement or function declaration
 
-function a(){
+function a() {
     console.log('a called');
 }
 
@@ -18,12 +18,12 @@ b();
 // anonymous function (mostlly used to assign as a value of a variable, cannot be used independently)
 
 // function () {
-    
+
 // }
 
 // named function expression
 
-let c = function xyz(){
+let c = function xyz() {
     console.log('xyz called');
 }
 
@@ -32,8 +32,8 @@ let c = function xyz(){
 
 // first class functions 
 
-let d = function (param1){
-    return function def(){
+let d = function (param1) {
+    return function def() {
 
     }
 }
@@ -41,4 +41,16 @@ let d = function (param1){
 console.log(d());
 
 
-// arrow functions
+//count vowel using arrow function
+
+const countVowels = (str) => {
+    let count = 0;
+    for (let char of str) {
+        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
+            count++
+        }
+    }
+    return count
+}
+
+console.log('countVowels:', countVowels("hello")); 
