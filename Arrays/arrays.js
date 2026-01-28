@@ -77,3 +77,5 @@ const arr = [1, 2, 3, 4, 5, 6, 7]
 // arr.splice(2, 2, 101, 102)
 arr.splice(2, 0, 101)
 console.log('arrays:', arr);
+
+//slice (extracts a portion of an array)
