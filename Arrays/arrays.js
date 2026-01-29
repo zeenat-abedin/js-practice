@@ -80,6 +80,17 @@ console.log('arrays:', arr);
 
 //slice (extracts a portion of an array)
 
+//map (returns a new array, doesn't modify the original array)
+
+const nums = [43, 65, 92]
+
+const newArr = nums.map((val) => {
+    return val * 2
+})
+
+console.log('newArr:', newArr);
+console.log('nums:', nums);
+
 //forEach
 
 const citiesArr = ["pune", "delhi", "mumbai"]
