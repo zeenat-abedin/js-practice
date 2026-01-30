@@ -95,6 +95,16 @@ console.log('nums:', nums);
 
 const citiesArr = ["pune", "delhi", "mumbai"]
 
-citiesArr.forEach((val) =>{
+citiesArr.forEach((val) => {
     console.log('citiesArr:', val.toUpperCase());
 })
+
+//filter
+
+const array = [1, 2, 3, 4, 5, 6, 7]
+
+const evenArr = array.filter((val) => {
+    return val % 2 === 0
+})
+
+console.log('evenArr:', evenArr);
