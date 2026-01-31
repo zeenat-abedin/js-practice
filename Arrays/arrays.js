@@ -108,3 +108,13 @@ const evenArr = array.filter((val) => {
 })
 
 console.log('evenArr:', evenArr);
+
+//reduce
+
+const numsArr = [1, 2, 3, 4]
+
+const output = numsArr.reduce((acc, curr) => {
+    return acc + curr
+})
+
+console.log('output:', output);
