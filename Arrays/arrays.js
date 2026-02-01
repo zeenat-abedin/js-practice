@@ -117,4 +117,9 @@ const output = numsArr.reduce((acc, curr) => {
     return acc + curr
 })
 
+const factorial = numsArr.reduce((res, curr) => {
+    return res * curr
+})
+
 console.log('output:', output);
+console.log('factorial:', factorial);
