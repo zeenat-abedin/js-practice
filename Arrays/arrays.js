@@ -111,7 +111,7 @@ console.log('evenArr:', evenArr);
 
 //reduce
 
-const numsArr = [1, 2, 3, 4, 5]
+const numsArr = [1, 2, 3, 4, 5, 6]
 
 const output = numsArr.reduce((acc, curr) => {
     return acc + curr
