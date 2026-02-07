@@ -9,3 +9,11 @@ function calculator(a, b, sumCallBack) {
 }
 
 calculator(1, 2, sum)
+
+//callback in setTimeout (works asynchronously)
+
+const hello = () => {
+  console.log('hello');
+}
+
+setTimeout(hello, 3000)
