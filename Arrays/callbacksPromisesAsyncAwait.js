@@ -17,3 +17,9 @@ const hello = () => {
 }
 
 setTimeout(hello, 3000)
+
+//callback hell
+
+function getData(dataId) {
+    console.log('', );
+}
