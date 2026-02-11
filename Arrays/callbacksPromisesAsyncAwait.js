@@ -22,8 +22,10 @@ setTimeout(hello, 3000)
 
 function getData(dataId, getNextData) {
     setTimeout(() => {
-        console.log('',);
-        getNextData()
+        console.log('dataId', dataId);
+        if (getNextData) {
+            getNextData()
+        }
     }, 2000)
 }
 
