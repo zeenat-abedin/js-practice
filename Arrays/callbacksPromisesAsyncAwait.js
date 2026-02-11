@@ -13,13 +13,20 @@ calculator(1, 2, sum)
 //callback in setTimeout (works asynchronously)
 
 const hello = () => {
-  console.log('hello');
+    console.log('hello');
 }
 
 setTimeout(hello, 3000)
 
 //callback hell
 
-function getData(dataId) {
-    console.log('', );
+function getData(dataId, getNextData) {
+    setTimeout(() => {
+        console.log('',);
+        getNextData()
+    }, 2000)
 }
+
+getData(1, () => {
+    getData(2)
+})
