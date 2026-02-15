@@ -30,11 +30,11 @@ function getData(dataId, getNextData) {
 }
 
 getData(1, () => {
-    console.log('1');
+    console.log('getting data 2');
     getData(2, () => {
-        console.log('2');
+        console.log('getting data 3');
         getData(3, () => {
-            console.log('3');
+            console.log('getting data 4');
         })
     })
 })
