@@ -39,3 +39,17 @@ getData(1, () => {
     })
 })
 
+
+//promise
+
+const getPromise = () => {
+   new Promise((resolve, reject) => {
+     console.log('I am a promise');
+     resolve('success')
+   })
+}
+
+let promise = getPromise()
+promise.then(() => {
+    console.log('promise fulfilled');
+})
