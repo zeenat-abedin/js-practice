@@ -58,3 +58,18 @@ promise.then((res) => {
 promise.catch((err) => {
     console.log('rejected', err);
 })
+
+function asyncFunc(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('some data 1');
+            resolve('success')
+        }, 5000)
+    })
+}
+
+let p1 = asyncFunc()
+
+p1.then((res) => {
+    console.log(res);
+})
