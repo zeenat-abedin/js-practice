@@ -75,4 +75,6 @@ let p1 = asyncFunc()
 
 p1.then((res) => {
     console.log(res);
-}).then(())
+}).then((res) => {
+    console.log(res);
+})
