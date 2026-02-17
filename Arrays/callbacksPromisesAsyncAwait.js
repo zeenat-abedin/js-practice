@@ -59,15 +59,18 @@ promise.catch((err) => {
     console.log('rejected', err);
 })
 
+//promise chain
+
 function asyncFunc(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('some data 1');
+            console.log('data 1');
             resolve('success')
-        }, 5000)
+        }, 3000)
     })
 }
 
+console.log('fetching data 1...');
 let p1 = asyncFunc()
 
 p1.then((res) => {
