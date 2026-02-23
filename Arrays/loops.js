@@ -8,4 +8,4 @@ function countNegatives(arr) {
   return count
 }
 
-console.log('loops:', countNegatives([-2, 4, -1, -6, 3, 2, -7, -18]));
+console.log('countNegatives:', countNegatives([-2, 4, -1, -6, 3, 2, -7, -18]));
