@@ -13,14 +13,14 @@ console.log('countNegatives:', countNegatives([-2, 4, -1, -6, 3, 2, -7, -18]));
 //find largest
 
 function findLargest(arr) {
-    let largest = 0;
+    let largest = -Infinity;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > largest) {
            largest = arr[i]
         }
     }
     return largest
-    
 }
 
 console.log('findLargest:', findLargest([5, 0, 7, 10, 8, 17, 1]));
+console.log('findLargest:', findLargest([-9, -19, -3]));
