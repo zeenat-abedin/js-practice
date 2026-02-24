@@ -24,3 +24,18 @@ function findLargest(arr) {
 
 console.log('findLargest:', findLargest([5, 0, 7, 10, 8, 17, 1]));
 console.log('findLargest:', findLargest([-9, -19, -3]));
+
+//find smallest
+
+function findSmallest(arr){
+    let smallest = Infinity; //when finding smallest, you can't put -Infinity
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+           smallest = arr[i]
+        }
+    }
+    return smallest
+}
+
+console.log('findSmallest:', findSmallest([5, 0, 7, 10, 8, 17, 1]));
+console.log('findSmallest:', findSmallest([-9, -19, -3]));
