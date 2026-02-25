@@ -43,6 +43,9 @@ console.log('findSmallest:', findSmallest([-9, -19, -3]));
 //find second largest
 
 function secondLargest(arr) {
+  if (arr.length < 2) {
+    return null;
+  }
   let firsLargest = -Infinity;
   let secondLargest = -Infinity;
 
