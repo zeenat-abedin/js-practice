@@ -61,3 +61,4 @@ function secondLargest(arr) {
 }
 
 console.log('secondLargest:', secondLargest([4, 9, 0, 2, 8, 7, 1]));
+console.log('secondLargest:', secondLargest([1]));
