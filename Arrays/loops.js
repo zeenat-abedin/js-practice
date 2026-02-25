@@ -39,3 +39,5 @@ function findSmallest(arr){
 
 console.log('findSmallest:', findSmallest([5, 0, 7, 10, 8, 17, 1]));
 console.log('findSmallest:', findSmallest([-9, -19, -3]));
+
+//find second largest
