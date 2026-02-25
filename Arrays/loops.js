@@ -41,3 +41,19 @@ console.log('findSmallest:', findSmallest([5, 0, 7, 10, 8, 17, 1]));
 console.log('findSmallest:', findSmallest([-9, -19, -3]));
 
 //find second largest
+
+function secondLargest(arr) {
+    let firsLargest = -Infinity
+    let secondLargest = -Infinity
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > firsLargest) {
+            secondLargest = firsLargest
+            firsLargest = arr[i]
+        } else if (arr[i] > secondLargest){
+           secondLargest = arr[i]
+        }
+    }
+    return secondLargest
+}
+
+console.log('secondLargest:', secondLargest([ 4, 9, 0, 2, 8, 7, 1]));
