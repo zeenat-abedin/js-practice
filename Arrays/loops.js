@@ -53,7 +53,7 @@ function secondLargest(arr) {
     if (arr[i] > firsLargest) {
       secondLargest = firsLargest;
       firsLargest = arr[i];
-    } else if (arr[i] > secondLargest) {
+    } else if (arr[i] > secondLargest && arr[i] != firsLargest) {
       secondLargest = arr[i];
     }
   }
@@ -62,3 +62,4 @@ function secondLargest(arr) {
 
 console.log('secondLargest:', secondLargest([4, 9, 0, 2, 8, 7, 1]));
 console.log('secondLargest:', secondLargest([1]));
+console.log('secondLargest:', secondLargest([10, 20, 8, 9, 3, 5, 20])); //case where array has duplicates
