@@ -63,3 +63,5 @@ function secondLargest(arr) {
 console.log('secondLargest:', secondLargest([4, 9, 0, 2, 8, 7, 1]));
 console.log('secondLargest:', secondLargest([1]));
 console.log('secondLargest:', secondLargest([10, 20, 8, 9, 3, 5, 20])); //case where array has duplicates
+
+//nested loop
