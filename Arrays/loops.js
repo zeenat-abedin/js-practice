@@ -66,7 +66,8 @@ console.log('secondLargest:', secondLargest([10, 20, 8, 9, 3, 5, 20])); //case w
 
 //nested loop
 
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-    
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < i; j++) {
+       console.log('i:', i, 'j', j);
+    }
 }
