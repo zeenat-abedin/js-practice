@@ -72,9 +72,18 @@ for (let i = 0; i < 3; i++) {
     }
 }
 console.log('-----------------');
+
 //nested loop in reverse order
 for (let i = 0; i < 3; i++) {
     for (let j = i; j > 0; j--) {
+       console.log('i:', i, 'j', j);
+    }
+}
+
+console.log('-----------------');
+
+for (let i = 5; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
        console.log('i:', i, 'j', j);
     }
 }
