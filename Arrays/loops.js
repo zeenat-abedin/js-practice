@@ -104,3 +104,5 @@ for (let i = 0; i < n; i++) {
 }
 
 //star pattern 2
+
+let n1 = 5;
