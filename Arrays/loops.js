@@ -105,4 +105,4 @@ for (let i = 0; i < n; i++) {
 
 //star pattern 2
 
-let initialCount = 5;
+let initialCount = 6;
