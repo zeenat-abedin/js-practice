@@ -105,4 +105,12 @@ for (let i = 0; i < n; i++) {
 
 //star pattern 2
 
-let initialCount = 6;
+let n1 = 4;
+
+for (let i = 0; i < n1; i++) {
+  let row = ""
+  for (let j = 0; j < i+1; j++) {
+    row = row + "*"
+  }
+  console.log('star pattern 2:', row);
+}
