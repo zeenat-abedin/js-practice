@@ -114,3 +114,5 @@ for (let i = 0; i < n1; i++) {
   }
   console.log('star pattern 2:', row);
 }
+
+//star pattern 3
