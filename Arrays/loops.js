@@ -105,7 +105,7 @@ for (let i = 0; i < n; i++) {
 
 //star pattern 2
 
-let n1 = 4;
+let n1 = 7;
 
 for (let i = 0; i < n1; i++) {
   let row = ""
