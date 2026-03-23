@@ -10,3 +10,5 @@ function sum(n) {
 }
 
 console.log(sum(6)); //(6+5+4+3+2+1 = 21)
+console.log(sum(5)); //(5+4+3+2+1 = 15)
+
