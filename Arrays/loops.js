@@ -96,9 +96,9 @@ for (let i = 5; i > 0; i--) {
 let n = 4;
 
 for (let i = 0; i < n; i++) {
-  let row = ""
+  let row = '';
   for (let j = 0; j < n; j++) {
-    row = row + "*"
+    row = row + '*';
   }
   console.log('star pattern 1:', row);
 }
@@ -108,9 +108,9 @@ for (let i = 0; i < n; i++) {
 let n1 = 7;
 
 for (let i = 0; i < n1; i++) {
-  let row = ""
-  for (let j = 0; j < i+1; j++) {
-    row = row + "*"
+  let row = '';
+  for (let j = 0; j <= i; j++) {
+    row = row + '*';
   }
   console.log('star pattern 2:', row);
 }
