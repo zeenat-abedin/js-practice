@@ -23,7 +23,9 @@ console.log(sum(5)); //(5+4+3+2+1 = 15)
 let arr = [5, 3, 2, 0, 1]
 
 function sumOfAll(n) {
-  if (n == 0) return arr[0];
+  if (n == 0) {
+    return arr[0];
+  }
   return arr[n] + sumOfAll(n - 1)
 }
 
