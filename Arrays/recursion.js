@@ -44,3 +44,13 @@ function sumOfAllOdd(n) {
 }
 
 console.log('sum of all odd numbers in an array:', sumOfAllOdd(arr2.length - 1));
+
+//sum of all numbers in array
+
+let arrV2 = [5, 3, 2, 10, 1]
+
+function sumOfAllV2(n) {
+
+}
+
+console.log('sumOfAllV2:', sumOfAllV2(arrV2.length - 1));
