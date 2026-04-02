@@ -49,8 +49,9 @@ console.log('sum of all odd numbers in an array:', sumOfAllOdd(arr2.length - 1))
 
 let arrV2 = [5, 3, 2, 10, 1]
 
-function sumOfAllV2(n) {
+function sumOfAllarrV2(n) {
+  
 
 }
 
-console.log('sumOfAllV2:', sumOfAllV2(arrV2.length - 1));
+console.log('sumOfAllarrV2:', sumOfAllarrV2(arrV2.length - 1));
