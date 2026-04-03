@@ -18,7 +18,9 @@ const users = [
     }
 ]
 
+const names = [];
 for (let i = 0; i < users.length; i++) {
     const element = users[i].name;
-    console.log('c1:', element);
+    names.push(element);
 }
+console.log('names:', names);
