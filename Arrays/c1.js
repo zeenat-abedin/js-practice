@@ -1,4 +1,5 @@
-// Write code to get array of names from given array of objects
+// 1. Write code to get array of names from given array of objects
+// 2. Get back only active users
 
 const users = [
     {
@@ -14,9 +15,11 @@ const users = [
     {
         id: 3,
         name: 'Mike',
-        isActive: true,
+        isActive: false,
     }
 ]
+
+const names = users.filter((user) => user.isActive).map((user) => user.name)
 
 // const names = [];
 // for (let i = 0; i < users.length; i++) {
@@ -24,13 +27,11 @@ const users = [
 //     names.push(element);
 // }
 
-// console.log('names:', names);
-
 //Better method
 
-const names = [];
-users.forEach((user) => {
-    names.push(user.name);
-})
+// const names = [];
+// users.forEach((user) => {
+//     names.push(user.name);
+// })
 
 console.log('names:', names);
