@@ -18,9 +18,19 @@ const users = [
     }
 ]
 
+// const names = [];
+// for (let i = 0; i < users.length; i++) {
+//     const element = users[i].name;
+//     names.push(element);
+// }
+
+// console.log('names:', names);
+
+//Better method
+
 const names = [];
-for (let i = 0; i < users.length; i++) {
-    const element = users[i].name;
-    names.push(element);
-}
+users.forEach((user) => {
+    names.push(user.name);
+})
+
 console.log('names:', names);
