@@ -68,5 +68,5 @@ const users = [
   },
 ];
 
-const isNameExists = (name, users) => users.some(user => user.name === name)
+const isNameExists = (name, users) => users.some((user) => user.name === name)
 console.log('isNameExists', isNameExists('Mike', users));
