@@ -31,3 +31,15 @@ const append = (arr, el) => {
 }
 
 console.log('numbers', append(numbers, 3));
+
+// Write a function which can concatenate 2 arrays
+
+const mergeArrays = (arr1, arr2) => {
+    return arr1.concat(...arr2)
+}
+
+const arr1 = [1]
+const arr2 = [2,3]
+const result = mergeArrays(arr1, arr2)
+
+console.log(result, arr1, arr2);
