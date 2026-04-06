@@ -30,4 +30,4 @@ const append = (arr, el) => {
     return arr
 }
 
-console.log('c2:', append(numbers, 3));
+console.log('numbers', append(numbers, 3));
