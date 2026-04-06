@@ -44,3 +44,29 @@ const arr2 = [2,3]
 const result = mergeArrays(arr1, arr2)
 
 console.log(result, arr1, arr2);
+
+// Write a function to check if user with such name exists
+
+const users = [
+  {
+    id: 1,
+    name: 'Jack',
+    isActive: true,
+    age: 20,
+  },
+  {
+    id: 2,
+    name: 'John',
+    isActive: true,
+    age: 28,
+  },
+  {
+    id: 3,
+    name: 'Mike',
+    isActive: false,
+    age: 30,
+  },
+];
+
+const isNameExists = (name, users) => users.some(user => user.name === name)
+console.log('isNameExists', isNameExists('Mike', users));
