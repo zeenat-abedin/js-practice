@@ -26,22 +26,22 @@ console.log('multiply:', multiply(2)(3));
 const numbers = [1, 2];
 
 const append = (arr, el) => {
-    arr.push(el)
-    return arr
-}
+  arr.push(el);
+  return arr;
+};
 
 console.log('numbers', append(numbers, 3));
 
 // Write a function which can concatenate 2 arrays
 
 const mergeArrays = (arr1, arr2) => {
-    // return arr1.concat(...arr2)
-    return [...arr1, ...arr2]
-}
+  // return arr1.concat(...arr2)
+  return [...arr1, ...arr2];
+};
 
-const arr1 = [1]
-const arr2 = [2,3]
-const result = mergeArrays(arr1, arr2)
+const arr1 = [1];
+const arr2 = [2, 3];
+const result = mergeArrays(arr1, arr2);
 
 console.log(result, arr1, arr2);
 
@@ -68,20 +68,20 @@ const users = [
   },
 ];
 
-const isNameExists = (name, users) => users.some((user) => user.name === name)
+const isNameExists = (name, users) => users.some((user) => user.name === name);
 console.log('isNameExists', isNameExists('Mike', users));
 
 // remove duplicates from an array
 
 const uniqueArr = (arr) => {
-    return [...new Set(arr)]
-}
+  return [...new Set(arr)];
+};
 
 console.log('uniqueArr', uniqueArr([1, 1, 2, 3]));
 
 //sort the array of numbers
 
-const arr = [3, 5, 1]
+const arr = [3, 5, 1];
 
-const sortedArr = arr.sort((a,b) => b - a)
-console.log('sortedArr', sortedArr);
+const sortedArr = arr.sort((a, b) => b - a);
+console.log('originalArr', arr, 'sortedArr', sortedArr); // original arr got mutated...so sort mutates original arr
