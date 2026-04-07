@@ -112,3 +112,13 @@ const range = (start, end) => {
 };
 
 console.log('range', range(1, 50));
+
+//Write a function which implements shuffle
+
+const shuffleItems = (items) => {
+  return items
+    .map((item) => ({ sort: Math.random(), value: item }))
+    .sort((item1, item2) => item1.sort - item2.sort);
+};
+
+console.log('shuffleItems', shuffleItems([1,2]));
