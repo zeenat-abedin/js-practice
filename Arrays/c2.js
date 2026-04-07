@@ -70,3 +70,11 @@ const users = [
 
 const isNameExists = (name, users) => users.some((user) => user.name === name)
 console.log('isNameExists', isNameExists('Mike', users));
+
+// remove duplicates from an array
+
+const uniqueArr = (arr) => {
+    return [...new Set(arr)]
+}
+
+console.log('uniqueArr', uniqueArr([1, 1, 2, 3]));
