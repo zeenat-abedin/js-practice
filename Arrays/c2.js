@@ -78,3 +78,10 @@ const uniqueArr = (arr) => {
 }
 
 console.log('uniqueArr', uniqueArr([1, 1, 2, 3]));
+
+//sort the array of numbers
+
+const arr = [3, 5, 1]
+
+const sortedArr = arr.sort((a,b) => b - a)
+console.log('sortedArr', sortedArr);
