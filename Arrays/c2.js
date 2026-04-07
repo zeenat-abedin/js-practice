@@ -89,14 +89,14 @@ console.log('originalArr', arr, 'sortedArr', sortedArr); // original arr got mut
 //sort array of objects by author's lastname
 
 const books = [
-    {name: "Harry Potter", author: "Joanne Rowling" },
-    {name: "Warcross", author: "Marie Lu" },
-    {name: "The Hunger Games", author: "Suzanne Collins" }
-]
+  { name: 'Harry Potter', author: 'Joanne Rowling' },
+  { name: 'Warcross', author: 'Marie Lu' },
+  { name: 'The Hunger Games', author: 'Suzanne Collins' },
+];
 const sortedBooks = books.sort((book1, book2) => {
-    const authorLastName1 = book1.author.split(" ")[1]
-    const authorLastName2 = book2.author.split(" ")[1]
-    return authorLastName1 < authorLastName2 ? -1 : 1
-})
+  const authorLastName1 = book1.author.split(' ')[1];
+  const authorLastName2 = book2.author.split(' ')[1];
+  return authorLastName1 < authorLastName2 ? -1 : 1;
+});
 
 console.log('sortedBooks', sortedBooks);
