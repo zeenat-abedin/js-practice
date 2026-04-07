@@ -121,4 +121,12 @@ const shuffleItems = (items) => {
     .sort((item1, item2) => item1.sort - item2.sort);
 };
 
-console.log('shuffleItems', shuffleItems([1,2]));
+console.log('shuffleItems', shuffleItems([1, 2]));
+
+//find the number of occurences of the minimum value in the list
+
+const arr3 = [1, 2, 3, 1, 1];
+const minValue = Math.min(...arr)
+const minArr = arr3.filter(el => el === minValue)
+
+console.log('minArr length', minArr.length);
