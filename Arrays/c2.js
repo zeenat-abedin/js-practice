@@ -100,3 +100,15 @@ const sortedBooks = books.sort((book1, book2) => {
 });
 
 console.log('sortedBooks', sortedBooks);
+
+//Write a function which implement range.
+
+const range = (start, end) => {
+  const result = [];
+  for (let i = start; i <= end; i++) {
+    result.push(i);
+  }
+  return result;
+};
+
+console.log('range', range(1, 50));
