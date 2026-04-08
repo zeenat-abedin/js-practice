@@ -28,10 +28,19 @@ class Employee {
 }
 
 class Manager extends Employee {
-  constructor() {}
+  setDepartment(name){
+    this.department = name
+  }
+
+  getDepartment(){
+    return this.department
+  }
 }
 
 const employee = new Employee(1, 'Jack');
 employee.setSalary('1000');
+const manager = new Manager(2, 'John')
+manager.setDepartment("Development")
 
 console.log('c3:', employee, employee.getSalary(), employee.getId(), employee.getName());
+console.log(`manager's department:`, manager.getDepartment());
