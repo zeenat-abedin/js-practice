@@ -60,16 +60,27 @@
 
 // z();
 
-function outer(b){
-    function inner() {
-       console.log(a, b); 
-    }
-    let a = 10;
-   return inner
-}
+// function outer(b) {
+//   function inner() {
+//     console.log(a, b);
+//   }
+//   let a = 10;
+//   return inner;
+// }
 
-const closureFunc = outer("hello world")
-closureFunc()
+// const closureFunc = outer('hello world');
+// closureFunc();
 
 // data hiding and encapsulation example using closures
 
+function counter() {
+  var count = 0;
+  return function incrementCounter() {
+    count++;
+    console.log(count)
+  }
+}
+
+var counter1 = counter()
+counter1()
+counter1()
