@@ -46,16 +46,27 @@
 
 // But we can make it work with var as well. Follow the below example
 
-function z() {
-  for (var i = 1; i <= 5; i++) {
-    function close(x) {
-      setTimeout(() => {
-        console.log(x);
-      }, i * 1000);
+// function z() {
+//   for (var i = 1; i <= 5; i++) {
+//     function close(x) {
+//       setTimeout(() => {
+//         console.log(x);
+//       }, i * 1000);
+//     }
+//     close(i);
+//   }
+//   console.log('Namaste Javascript');
+// }
+
+// z();
+
+function outer(){
+    let a = 10;
+    function inner() {
+       console.log(a); 
     }
-    close(i);
-  }
-  console.log('Namaste Javascript');
+   return inner
 }
 
-z();
+const closureFunc = outer()
+closureFunc()
