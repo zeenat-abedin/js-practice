@@ -70,3 +70,6 @@ function outer(b){
 
 const closureFunc = outer("hello world")
 closureFunc()
+
+// data hiding and encapsulation example using closures
+
