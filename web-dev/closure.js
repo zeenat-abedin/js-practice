@@ -60,13 +60,13 @@
 
 // z();
 
-function outer(){
-    let a = 10;
+function outer(b){
     function inner() {
-       console.log(a); 
+       console.log(a, b); 
     }
+    let a = 10;
    return inner
 }
 
-const closureFunc = outer()
+const closureFunc = outer("hello world")
 closureFunc()
