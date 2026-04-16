@@ -74,13 +74,13 @@
 // data hiding and encapsulation example using closures
 
 function counter() {
-  var count = 0;
+  let count = 0;
   return function incrementCounter() {
     count++;
     console.log(count)
   }
 }
 
-var counter1 = counter()
+const counter1 = counter()
 counter1()
 counter1()
