@@ -91,13 +91,27 @@ function Counter() {
   let count = 0;
   this.incrementCounter = function () {
     count++;
-    console.log(count)
-  }
-   this.decrementCounter = function () {
+    console.log(count);
+  };
+  this.decrementCounter = function () {
     count--;
-    console.log(count)
-  }
+    console.log(count);
+  };
 }
 
-const counter1 = new Counter()
-counter1.incrementCounter()
+const counter1 = new Counter();
+counter1.incrementCounter();
+
+console.log('-----------------------');
+
+// example of variables declared inside a closure are not garbage collected
+
+function a() {
+  let x = 0; //since x is being referred by inner function b and it is returned (forms a closure with variable x), therefore the memorey for variable x cannot be freed up. That means it is not garbage collected
+  return function b() {
+    console.log(x);
+  };
+}
+
+const y = a(); //after a is excetued, x could've been garbage collected
+console.log(y())
