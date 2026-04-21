@@ -115,3 +115,15 @@ function a() {
 
 const y = a(); //after a is excetued, x could've been garbage collected
 console.log(y())
+
+
+function outer(){
+  const a = 18;
+  function inner() {
+    console.log(a)
+  }
+  return inner
+}
+
+const closureFunc = outer()
+closureFunc()
