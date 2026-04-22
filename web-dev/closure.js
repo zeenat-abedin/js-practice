@@ -102,7 +102,7 @@ function Counter() {
 const counter1 = new Counter();
 counter1.incrementCounter();
 
-console.log('-----------------------');
+console.log('----------------');
 
 // example of variables declared inside a closure are not garbage collected
 
