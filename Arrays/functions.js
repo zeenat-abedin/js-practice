@@ -40,7 +40,6 @@ let d = function (param1) {
 
 console.log(d());
 
-
 //count vowel using arrow function
 
 const countVowels = (str) => {
