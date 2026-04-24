@@ -22,7 +22,7 @@
 
 try {
   const result = someUndefinedVariable + 10;
-  console.log(result)
+  console.log(result);
 } catch (error) {
-  console.log('An error occurred', error.message)
+  console.log('An error occurred', error.message); //An error occurred someUndefinedVariable is not defined
 }
