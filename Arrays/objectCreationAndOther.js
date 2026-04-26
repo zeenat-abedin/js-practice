@@ -68,3 +68,15 @@ const propertyName = 'age'
 
 console.log(user[propertyName]) // 35
 console.log(user.propertyName) // undefined
+
+// common methods to iterate over the properties of an object
+
+const candidate = {
+  name: 'Tayne',
+  profession: 'Coder',
+  age: 35
+}
+
+for (const key in candidate) {
+  console.log(candidate[key])
+}
