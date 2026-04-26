@@ -61,3 +61,10 @@ console.log(user)
 delete user.age
 
 console.log(user)
+
+// dynamically assign property name to a variable
+
+const propertyName = 'age'
+
+console.log(user[propertyName]) // 35
+console.log(user.propertyName) // undefined
