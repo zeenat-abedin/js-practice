@@ -37,3 +37,21 @@ men.role = 'Trainer',
 men.age = 29
 
 console.log(men)
+
+// add, modify or delete properties
+
+const user = {}
+
+// adding properties
+user.name = 'Ron'
+user.age = 25
+user.email = 'abc@gmail.com'
+user.country = 'India'
+
+console.log(user)
+
+// modifying properties
+
+user.age = 35
+
+console.log(user)
