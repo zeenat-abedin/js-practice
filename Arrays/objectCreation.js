@@ -21,3 +21,19 @@ newObj.profession = 'Data Scientist'
 newObj.age = 28
 
 console.log('object using constructor', newObj)
+
+// Object.create
+
+let newPerson = {
+  name: '',
+  role: '',
+  age: 0    
+}
+
+let men = Object.create(newPerson)
+
+men.name = 'Harry',
+men.role = 'Trainer',
+men.age = 29
+
+console.log(men)
