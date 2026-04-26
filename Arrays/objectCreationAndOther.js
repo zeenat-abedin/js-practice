@@ -77,6 +77,20 @@ const candidate = {
   age: 35
 }
 
+// 1st method - for in loop
+
 for (const key in candidate) {
   console.log(candidate[key])
 }
+
+// 2nd method - Object.keys()
+
+Object.keys(candidate).forEach((key) => {
+  console.log('key is:', key)
+})
+
+// 2nd method - Object.values()
+
+Object.values(candidate).forEach((value) => {
+  console.log('Value is', value)
+})
