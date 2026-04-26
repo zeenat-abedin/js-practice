@@ -55,3 +55,9 @@ console.log(user)
 user.age = 35
 
 console.log(user)
+
+// deleting properties
+
+delete user.age
+
+console.log(user)
