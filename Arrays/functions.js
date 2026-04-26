@@ -52,4 +52,4 @@ const countVowels = (str) => {
     return count
 }
 
-console.log('countVowels:', countVowels("hello")); 
+console.log('countVowels:', countVowels("hello"));
