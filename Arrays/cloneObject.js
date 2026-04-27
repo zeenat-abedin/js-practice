@@ -35,10 +35,10 @@ const shallowCopy = Object.assign({}, person)
 shallowCopy.address.city = 'Mumbai'
 
 console.log(shallowCopy.address.city)
-console.log(person.address.city) //original also got modified
+console.log(person.address.city) // original property also got modified
 
 const deepCopy = JSON.parse(JSON.stringify(person))
 deepCopy.address.city = 'Bangalore'
 
 console.log(deepCopy.address.city)
-console.log(person.address.city) // original doesn't get modified
+console.log(person.address.city) // original property doesn't get modified
