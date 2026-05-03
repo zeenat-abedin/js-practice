@@ -32,7 +32,7 @@ let newPerson = {
 
 let men = Object.create(newPerson)
 
-men.name = 'Harry',
+men.name = 'Harish',
 men.role = 'Trainer',
 men.age = 29
 
