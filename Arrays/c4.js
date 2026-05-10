@@ -19,3 +19,8 @@ function reverseString(str) {
 }
 
 console.log(reverseString("Hello World!"))
+
+const newItems = Array.from({ length: 20 }, (_, i) => ({
+    id: (page - 1) * 20 + i + 1,
+    title: `Item ${(page - 1) * 20 + i + 1}`,
+}));
