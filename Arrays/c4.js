@@ -19,3 +19,4 @@ function reverseString(str) {
 }
 
 console.log(reverseString("Hello World!"))
+console.log(reverseString("Happy coding!"))
