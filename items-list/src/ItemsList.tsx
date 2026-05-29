@@ -15,6 +15,8 @@
 // Allow selecting maximum 3 items only.
 // Disable further selections once the limit is reached.
 
+import { useMemo, useState } from 'react';
+
 type Item = {
   id: number;
   name: string;
@@ -29,11 +31,36 @@ const items: Item[] = [
 ];
 
 export default function ItemsList() {
+  const [selectedItems, setSelectedItems] = useState<number[]>([]);
+  const [search, setSearch] = useState('');
+
+  const handleSelect = (id: number) => {
+    const alreadySelected = selectedItems.includes(id);
+    if (alreadySelected) {
+      setSelectedItems((prev) => prev.filter((item) => item !== id));
+      return;
+    }
+    setSelectedItems((prev) => [...prev, id]);
+  };
+
+  const filterdItems = useMemo(() => {
+    return items.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()));
+  }, [search]);
+
   return (
     <ul>
-      {items.map((item) => (
-        <li key={item.id}>{item.name}</li>
-      ))}
+      {filterdItems.map((item) => {
+        const isSelected = selectedItems.includes(item.id);
+
+        return (
+          <li key={item.id}>
+            <label>
+              <input type="checkbox" checked={isSelected} onChange={() => handleSelect(item.id)} />
+              {item.name}
+            </label>
+          </li>
+        );
+      })}
     </ul>
   );
 }
