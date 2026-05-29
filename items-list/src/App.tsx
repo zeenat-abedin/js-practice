@@ -1,4 +1,5 @@
 import './App.css'
+import ItemsList from './ItemsList'
 
 // Build a React (TSX preferred) component that
 // displays a list of items (e.g., fruits or products)
@@ -18,12 +19,9 @@ import './App.css'
 // Disable further selections once the limit is reached.
 
 function App() {
-
   return (
     <>
-      <div>
-        Hello there
-      </div>
+      <ItemsList/>
     </>
   )
 }
