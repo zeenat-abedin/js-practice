@@ -31,8 +31,8 @@ const items: Item[] = [
 export default function ItemsList() {
   return (
     <ul>
-      {items.map((el) => (
-        <li>{el.name}</li>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li>
       ))}
     </ul>
   );
