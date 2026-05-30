@@ -48,7 +48,9 @@ export default function ItemsList() {
   }, [search]);
 
   return (
-    <ul>
+    <>
+     <h3>List Items</h3>
+     <ul>
       {filterdItems.map((item) => {
         const isSelected = selectedItems.includes(item.id);
 
@@ -62,5 +64,6 @@ export default function ItemsList() {
         );
       })}
     </ul>
+    </>
   );
 }
