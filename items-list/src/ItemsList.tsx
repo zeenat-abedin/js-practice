@@ -49,21 +49,33 @@ export default function ItemsList() {
 
   return (
     <>
-     <h3>List Items</h3>
-     <ul>
-      {filterdItems.map((item) => {
-        const isSelected = selectedItems.includes(item.id);
+      <h3>List Items</h3>
+      <ul>
+        {filterdItems.map((item) => {
+          const isSelected = selectedItems.includes(item.id);
 
-        return (
-          <li key={item.id}>
-            <label>
-              <input type="checkbox" checked={isSelected} onChange={() => handleSelect(item.id)} />
-              {item.name}
-            </label>
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li key={item.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={isSelected}
+                  onChange={() => handleSelect(item.id)}
+                />
+                {item.name}
+              </label>
+            </li>
+          );
+        })}
+      </ul>
+      <h3>Selected Items</h3>
+      <ul>
+        {items
+          .filter((item) => selectedItems.includes(item.id))
+          .map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+      </ul>
     </>
   );
 }
