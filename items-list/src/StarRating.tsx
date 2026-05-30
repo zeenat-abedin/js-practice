@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function StarRating() {
-  const [rating, setRating] = useState(2);
+  const [rating, setRating] = useState(0);
 
   const limit = 5;
   return (
