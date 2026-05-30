@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <ItemsList/>
-      <StarRating limit={5} rating={3}/>
+      <StarRating />
     </>
   )
 }
