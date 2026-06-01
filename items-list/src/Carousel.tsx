@@ -27,15 +27,27 @@ const items = [
 export default function Carousel() {
   const [currentItem, setCurrentItem] = useState(0);
 
+  const prevItem = () => {
+    setCurrentItem((curr) => curr - 1)
+  }
+
+  const nextItem = () => {
+    if (currentItem === items.length - 1) {
+      setCurrentItem(0)
+    } else {
+      setCurrentItem((curr) => curr + 1)
+    }
+  }
+
   return (
     <div className="carousel">
-      <button>Prev</button>
+      <button onClick={prevItem}>Prev</button>
       <div className="carousel-item">
         <img width={200} height={200} src={items[currentItem].imageUrl}/>
         <h2>{items[currentItem].title}</h2>
         <p>{items[currentItem].description}</p>
       </div>
-      <button>Next</button>
+      <button onClick={nextItem}>Next</button>
     </div>
   );
 }
