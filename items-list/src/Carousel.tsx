@@ -28,8 +28,14 @@ export default function Carousel() {
   const [currentItem, setCurrentItem] = useState(0);
 
   return (
-    <div>
-      <h2>{items[currentItem].title}</h2>
+    <div className="carousel">
+      <button>Prev</button>
+      <div className="carousel-item">
+        <img width={200} height={200} src={items[currentItem].imageUrl}/>
+        <h2>{items[currentItem].title}</h2>
+        <p>{items[currentItem].description}</p>
+      </div>
+      <button>Next</button>
     </div>
   );
 }
