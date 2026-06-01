@@ -28,16 +28,16 @@ export default function Carousel() {
   const [currentItem, setCurrentItem] = useState(0);
 
   const prevItem = () => {
-    setCurrentItem((curr) => curr - 1)
-  }
+    setCurrentItem((curr) => curr - 1);
+  };
 
   const nextItem = () => {
     if (currentItem === items.length - 1) {
-      setCurrentItem(0)
+      setCurrentItem(0);
     } else {
-      setCurrentItem((curr) => curr + 1)
+      setCurrentItem((curr) => curr + 1);
     }
-  }
+  };
 
   return (
     <div className="carousel">
