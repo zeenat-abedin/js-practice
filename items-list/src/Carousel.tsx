@@ -28,7 +28,11 @@ export default function Carousel() {
   const [currentItem, setCurrentItem] = useState(0);
 
   const prevItem = () => {
-    setCurrentItem((curr) => curr - 1);
+     if (currentItem === 0) {
+      setCurrentItem(items.length - 1);
+    } else {
+      setCurrentItem((curr) => curr - 1);
+    }
   };
 
   const nextItem = () => {
