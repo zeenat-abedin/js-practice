@@ -44,9 +44,9 @@ export default function Carousel() {
   };
 
   return (
-    <div className="carousel">
+    <div>
       <button onClick={prevItem}>Prev</button>
-      <div className="carousel-item">
+      <div>
         <img width={200} height={200} src={items[currentItem].imageUrl}/>
         <h2>{items[currentItem].title}</h2>
         <p>{items[currentItem].description}</p>
