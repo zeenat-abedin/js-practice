@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const items = [
   {
@@ -35,13 +35,20 @@ export default function Carousel() {
     }
   };
 
-  const nextItem = () => {
+  const nextItem = useCallback(() => {
     if (currentItem === items.length - 1) {
       setCurrentItem(0);
     } else {
       setCurrentItem((curr) => curr + 1);
     }
-  };
+  }, [currentItem]);
+
+  useEffect(() => {
+   const timer = setInterval(() => {
+    nextItem()
+    }, 2000)
+   return () => clearInterval(timer)
+  }, [currentItem, nextItem])
 
   return (
     <div>
