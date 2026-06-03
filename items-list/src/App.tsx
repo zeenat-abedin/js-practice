@@ -1,5 +1,6 @@
-import './App.css'
-import Table from './Table'
+import './App.css';
+import StopWatch from './StopWatch';
+// import Table from './Table';
 // import Carousel from './Carousel'
 // import ItemsList from './ItemsList'
 // import Search from './Search'
@@ -10,11 +11,12 @@ function App() {
     <>
       {/* <ItemsList/>
       <StarRating />
-      <Search /> */}
-      {/* <Carousel/> */}
-      <Table/>
+      <Search /> 
+       <Carousel/> 
+       <Table/> */}
+      <StopWatch />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
