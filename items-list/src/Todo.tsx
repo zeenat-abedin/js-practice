@@ -10,9 +10,9 @@ export default function Todo() {
 
   return (
     <>
-      <div>
+      <div style={{ margin: 15 }}>
         <input type="text" onChange={(e) => setText(e.target.value)} />
-        <button onClick={addTask} style={{ paddingTop: 15 }}>
+        <button onClick={addTask} >
           Add Task
         </button>
       </div>
