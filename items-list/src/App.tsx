@@ -1,5 +1,6 @@
 import './App.css'
-import Carousel from './Carousel'
+import Table from './Table'
+// import Carousel from './Carousel'
 // import ItemsList from './ItemsList'
 // import Search from './Search'
 // import StarRating from './StarRating'
@@ -10,7 +11,8 @@ function App() {
       {/* <ItemsList/>
       <StarRating />
       <Search /> */}
-      <Carousel/>
+      {/* <Carousel/> */}
+      <Table/>
     </>
   )
 }
