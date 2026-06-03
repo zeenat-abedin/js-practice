@@ -12,6 +12,7 @@ export default function Todo() {
     if (!todos.includes(text)) {
       setTodos([...todos, text]);
     }
+    setText('')
   }
 
   return (
