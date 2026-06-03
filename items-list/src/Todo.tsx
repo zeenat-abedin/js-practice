@@ -18,7 +18,7 @@ export default function Todo() {
   return (
     <>
       <div style={{ margin: 15 }}>
-        <input type="text" onChange={(e) => setText(e.target.value)} />
+        <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
         <button onClick={addTask}>Add Task</button>
       </div>
       {todos.map((todo) => (
