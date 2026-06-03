@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
 export default function Table() {
-  const [tableData, setTableData] = useState([]);
+  const [tableData, setTableData] = useState<User[]>([]);
 
   useEffect(() => {
     const fetchTableData = async () => {
