@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Todo() {
-  const [todos, setTodos] = useState(['learn react', 'practice basic DSA', 'brush up Javascript']);
+  const [todos, setTodos] = useState(['learn advanced React in depth', 'practice basic DSA', 'brush up Javascript']);
   const [text, setText] = useState('');
 
   function addTask() {
