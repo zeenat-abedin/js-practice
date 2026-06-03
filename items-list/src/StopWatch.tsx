@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 export default function StopWatch() {
-  const [time, setTime] = useState(300);
+  const [time, setTime] = useState(3600);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {

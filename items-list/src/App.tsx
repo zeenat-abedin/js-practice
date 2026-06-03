@@ -1,5 +1,6 @@
 import './App.css';
 import StopWatch from './StopWatch';
+import Todo from './Todo';
 // import Table from './Table';
 // import Carousel from './Carousel'
 // import ItemsList from './ItemsList'
@@ -14,7 +15,8 @@ function App() {
       <Search /> 
        <Carousel/> 
        <Table/> */}
-      <StopWatch />
+      {/* <StopWatch /> */}
+      <Todo/>
     </>
   );
 }
