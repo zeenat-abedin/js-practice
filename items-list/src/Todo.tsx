@@ -15,6 +15,10 @@ export default function Todo() {
     setText('');
   }
 
+  function deleteTodo(todo: string) {
+    setTodos(todos.filter((curr) => curr !== todo))
+  }
+
   return (
     <>
       <div style={{ margin: 15 }}>
@@ -22,7 +26,7 @@ export default function Todo() {
         <button onClick={addTask}>Add Task</button>
       </div>
       {todos.map((todo) => (
-        <li key={todo}>{todo}</li>
+        <li key={todo}>{todo} <button onClick={() => deleteTodo(todo)}>Delete</button></li>
       ))}
     </>
   );
