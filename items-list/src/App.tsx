@@ -1,5 +1,5 @@
 import './App.css';
-import StopWatch from './StopWatch';
+// import StopWatch from './StopWatch';
 import Todo from './Todo';
 // import Table from './Table';
 // import Carousel from './Carousel'
