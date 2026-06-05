@@ -1,6 +1,8 @@
 import './App.css';
+import explorer from './data/folderData';
+import Folder from './Folder';
 // import StopWatch from './StopWatch';
-import Todo from './Todo';
+// import Todo from './Todo';
 // import Table from './Table';
 // import Carousel from './Carousel'
 // import ItemsList from './ItemsList'
@@ -15,8 +17,9 @@ function App() {
       <Search /> 
        <Carousel/> 
        <Table/> */}
-      {/* <StopWatch /> */}
-      <Todo/>
+      {/* <StopWatch />
+      <Todo/> */}
+      <Folder explorer={explorer}/>
     </>
   );
 }
