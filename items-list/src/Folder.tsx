@@ -6,7 +6,7 @@ export default function Folder({ explorer }) {
   if (explorer.isFolder === true) {
     return (
       <>
-        <div onClick={() => setExpanded(!expanded)}>{explorer.name}</div>
+        <div onClick={() => setExpanded(!expanded)}>{expanded.name ? '📁' : '📂'}{explorer.name}</div>
         <div style={{ paddingLeft: '25px' }}>
           {explorer.items.map((item: { id: string; name: string }) => (
             <Folder key={item.id} explorer={item} />
@@ -15,6 +15,6 @@ export default function Folder({ explorer }) {
       </>
     );
   } else {
-    return <div>{explorer.name}</div>;
+    return <div>📄{explorer.name}</div>;
   }
 }
