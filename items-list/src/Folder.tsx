@@ -2,15 +2,19 @@ import { useState } from 'react';
 
 export default function Folder({ explorer }) {
   const [expanded, setExpanded] = useState(false);
-  return (
-    <>
-      <h3>Folder Structure/ Nested Accordion/ Nested Comments</h3>
-      <div onClick={() => setExpanded(!expanded)}>{explorer.name}</div>
-      <div>
-        {explorer.items.map((item: { name: string }) => (
-          <li>{item.name}</li>
-        ))}
-      </div>
-    </>
-  );
+
+  if (explorer.isFolder === true) {
+    return (
+      <>
+        <div onClick={() => setExpanded(!expanded)}>{explorer.name}</div>
+        <div style={{ paddingLeft: '25px' }}>
+          {explorer.items.map((item: { id: string; name: string }) => (
+            <Folder key={item.id} explorer={item} />
+          ))}
+        </div>
+      </>
+    );
+  } else {
+    return <div>{explorer.name}</div>;
+  }
 }
