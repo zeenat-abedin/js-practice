@@ -1,4 +1,4 @@
-// call, apply, bind
+// call, apply, bind example
 
 const dish = {
     dish: "biryani"
