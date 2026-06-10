@@ -8,6 +8,8 @@
 // Category
 // Price
 
+import { useState } from "react"
+
 // Product Image
 // Functionality
 // Implement the following features:
@@ -35,3 +37,18 @@
 // Focus on functionality and code quality.
 // You may use either Fetch API or Axios.
 // Feel free to structure components as you see fit.
+
+interface Product {
+    id: string;
+    name: string;
+    category: string;
+    image: string
+}
+
+export const useProducts = () => {
+    const [ products, setProducts ] = useState<Product[]>([])
+    const [ loading, setLoading ] = useState(false)
+    const [error, setError] = useState(false)
+
+    return { products, loading, error }
+}
