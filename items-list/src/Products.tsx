@@ -5,6 +5,12 @@ export default function Products() {
   const { products, loading, error } = useProducts();
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('');
+
+  const categories = useMemo(
+    () => ['all', ...new Set(products.map((product) => product.category))],
+    [products],
+  );
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
@@ -18,18 +24,30 @@ export default function Products() {
       result = result.filter((product) => product.category === category);
     }
 
-    return result;
-  }, [category, products, search]);
+    switch (sortBy) {
+      case 'name.asc':
+        result.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+      case 'name.desc':
+        result.sort((a, b) => b.title.localeCompare(a.title));
+        break;
+      case 'price.asc':
+        result.sort((a, b) => a.price - b.price);
+        break;
+      case 'price.desc':
+        result.sort((a, b) => b.price - a.price);
+        break;
 
-  const categories = useMemo(
-    () => ['all', ...new Set(products.map((product) => product.category))],
-    [products],
-  );
+      default:
+        break;
+    }
+
+    return result;
+  }, [category, products, search, sortBy]);
 
   return (
     <>
       <h1>Products Dashboard</h1>
-      {/* <h4>{JSON.stringify(products)}</h4> */}
       <input
         type="text"
         value={search}
@@ -42,6 +60,13 @@ export default function Products() {
             {item}
           </option>
         ))}
+      </select>
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+        <option value="">Sort By</option>
+        <option value="name.asc">Sort By Name (A-Z)</option>
+        <option value="name.desc">Sort By Name (Z-A)</option>
+        <option value="price.asc">Sort By Price (Lower to Higher)</option>
+        <option value="price.desc">Sort By Price (Higher to Lower)</option>
       </select>
       <table>
         <thead>
