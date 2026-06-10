@@ -37,7 +37,6 @@ export default function Products() {
       case 'price.desc':
         result.sort((a, b) => b.price - a.price);
         break;
-
       default:
         break;
     }
