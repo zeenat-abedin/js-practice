@@ -29,7 +29,7 @@ export default function Products() {
   return (
     <>
       <h1>Products Dashboard</h1>
-      <h4>{JSON.stringify(products)}</h4>
+      {/* <h4>{JSON.stringify(products)}</h4> */}
       <input
         type="text"
         value={search}
