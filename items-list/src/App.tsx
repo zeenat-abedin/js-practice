@@ -1,6 +1,8 @@
 import './App.css';
-import explorer from './data/folderData';
-import Folder from './Folder';
+
+import Products from './Products';
+// import explorer from './data/folderData';
+// import Folder from './Folder';
 // import StopWatch from './StopWatch';
 // import Todo from './Todo';
 // import Table from './Table';
@@ -12,16 +14,16 @@ import Folder from './Folder';
 function App() {
   return (
     <>
-      {/* <ItemsList/>
+      {/* <ItemsList />
       <StarRating />
-      <Search /> 
-       <Carousel/> 
-       <Table/> */}
-      {/* <StopWatch />
-      <Todo/> */}
-              <h3>Folder Structure/ Nested Accordion/ Nested Comments</h3>
-
-      <Folder explorer={explorer}/>
+      <Search />
+      <Carousel />
+      <Table />
+      <StopWatch />
+      <Todo /> */}
+      {/* <h3>Folder Structure/ Nested Accordion/ Nested Comments</h3>
+      <Folder explorer={explorer} /> */}
+      <Products/>
     </>
   );
 }
