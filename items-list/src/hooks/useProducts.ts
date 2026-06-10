@@ -8,7 +8,7 @@
 // Category
 // Price
 
-import { useState } from "react"
+import { useEffect, useState } from 'react';
 
 // Product Image
 // Functionality
@@ -39,16 +39,36 @@ import { useState } from "react"
 // Feel free to structure components as you see fit.
 
 interface Product {
-    id: string;
-    name: string;
-    category: string;
-    image: string
+  id: string;
+  name: string;
+  category: string;
+  image: string;
 }
 
 export const useProducts = () => {
-    const [ products, setProducts ] = useState<Product[]>([])
-    const [ loading, setLoading ] = useState(false)
-    const [error, setError] = useState(false)
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-    return { products, loading, error }
-}
+  useEffect(() => {
+    const fetchProductsData = async () => {
+      try {
+        setLoading(true)
+        const res = await fetch('https://fakestoreapi.com/products');
+        const data = await res.json()
+        if (!res.ok) {
+          throw new Error('Failed to fetch data')  
+        }
+        setProducts(data)
+      } catch (error) {
+        setError(error instanceof Error ? error.message : '')
+      } finally {
+        setLoading(false)
+      }
+    };
+
+    fetchProductsData();
+  }, []);
+
+  return { products, loading, error };
+};
