@@ -54,6 +54,14 @@ export default function Products() {
     currentPage * ITEMS_PER_PAGE,
   );
 
+  if (loading) {
+    return <h2>Loading products...</h2>
+  }
+
+  if (error) {
+    return <h2>Error: {error}</h2>
+  }
+
   return (
     <>
       <h1>Products Dashboard</h1>
