@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useProducts } from './hooks/useProducts';
 
 export default function Products() {
@@ -6,6 +6,9 @@ export default function Products() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
   const [sortBy, setSortBy] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const ITEMS_PER_PAGE = 10;
 
   const categories = useMemo(
     () => ['all', ...new Set(products.map((product) => product.category))],
@@ -44,6 +47,13 @@ export default function Products() {
     return result;
   }, [category, products, search, sortBy]);
 
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE,
+  );
+
   return (
     <>
       <h1>Products Dashboard</h1>
@@ -51,7 +61,10 @@ export default function Products() {
         type="text"
         value={search}
         placeholder="Search by name..."
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+          setSearch(e.target.value);
+          setCurrentPage(1);
+        }}
       />
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
         {categories.map((item) => (
@@ -76,7 +89,7 @@ export default function Products() {
           </tr>
         </thead>
         <tbody>
-          {filteredProducts.map((item) => (
+          {paginatedProducts.map((item) => (
             <tr key={item.id}>
               <td>{item.title}</td>
               <td>{item.category}</td>
@@ -85,6 +98,13 @@ export default function Products() {
           ))}
         </tbody>
       </table>
+      <div style={{ marginTop: '20px' }}>
+        <button onClick={() => setCurrentPage((curr) => curr - 1)} disabled={currentPage === 1}>Prev</button>
+        <span style={{ margin: '0 10px' }}>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button onClick={() => setCurrentPage((curr) => curr + 1)} disabled={currentPage === totalPages}>Next</button>
+      </div>
     </>
   );
 }
