@@ -12,3 +12,11 @@ function reverseString(s) {
 
 console.log(reverseString(["h","e","l","l","o"]));
 console.log(reverseString(["H","a","n","n","a","h"]));
+
+// using basic built in method
+function reverseAString(str){
+  return str.split('').reverse().join('')
+}
+
+console.log(reverseAString('hello world'))
+
