@@ -51,7 +51,6 @@ let arrV2 = [5, 3, 2, 10, 1]
 
 function sumOfAllarrV2(n) {
   
-
 }
 
 console.log('sumOfAllarrV2:', sumOfAllarrV2(arrV2.length - 1));
