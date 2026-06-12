@@ -33,7 +33,7 @@ console.log('sum of all elements in an array:', sumOfAll(arr.length - 1));
 
 //sum of all the odd numbers in an array
 
-let arr2 = [5, 3, 2, 10, 1] 
+let arr2 = [5, 3, 2, 10, 1]
 
 function sumOfAllOdd(n) {
   let isOdd = n % 2 !== 0;  //n = length of the array - 1
@@ -50,7 +50,7 @@ console.log('sum of all odd numbers in an array:', sumOfAllOdd(arr2.length - 1))
 let arrV2 = [5, 3, 2, 10, 1]
 
 function sumOfAllarrV2(n) {
-  
+
 }
 
 console.log('sumOfAllarrV2:', sumOfAllarrV2(arrV2.length - 1));
