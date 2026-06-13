@@ -57,11 +57,25 @@ function App() {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [rules, setRules] = useState(INITIAL_RULES);
 
-  const toggleCatehory = (cat) => {
-    setSelectedCategories((prev) => (
-      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
-    ))
-  }
+  const toggleCategory = (cat) => {
+    setSelectedCategories((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat],
+    );
+  };
+
+  const filteredRules = useMemo(() => {
+    return rules.filter((rule) => {
+      const role = ROLES.find((r) => r.id === rule.roleId);
+      const matchesSearch = search === '' || role?.name.toLowerCase();
+      const matchesAccess = accessFilter === 'All' || rule.access === accessFilter;
+      const matchesCatgeory =
+        selectedCategories.length === 0 ||
+        selectedCategories.every((cat) => rule.catgories.includes(cat));
+      return matchesSearch && matchesAccess && matchesCatgeory;
+    });
+  }, [accessFilter, rules, search, selectedCategories]);
+
+  const getRoleName = (id) => ROLES.find((r) => r.id === id)?.name ?? 'Unknown';
 
   return (
     <>
@@ -79,7 +93,9 @@ function App() {
       <div>
         <select value={accessFilter} onChange={(e) => setAccessFilter(e.target.value)}>
           {ACCESS_TYPES.map((t) => (
-            <option key={t} value={t}>{t === "All" ? "All Access Types" : t}</option>
+            <option key={t} value={t}>
+              {t === 'All' ? 'All Access Types' : t}
+            </option>
           ))}
         </select>
       </div>
@@ -88,17 +104,27 @@ function App() {
         <h3>Filter by Category</h3>
         <div>
           {CATEGORIES.map((cat) => {
-            const active = selectedCategories.includes(cat)
+            const active = selectedCategories.includes(cat);
             return (
-              <button key={cat} onClick={() => toggleCatehory(cat)} style={{fontWight: active? 600: 400, cursor: "pointer"}}>
+              <button
+                key={cat}
+                onClick={() => toggleCategory(cat)}
+                style={{ fontWight: active ? 600 : 400, cursor: 'pointer' }}
+              >
                 {cat}
               </button>
-            )
+            );
           })}
         </div>
       </div>
 
-
+      {/* Rules List */}
+      {filteredRules.map((rule) => (
+        <>
+          <span>{getRoleName(rule.roleId)}</span>
+          <span>{rule.access}</span>
+        </>
+      ))}
     </>
   );
 }
