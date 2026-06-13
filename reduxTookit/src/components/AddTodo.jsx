@@ -9,10 +9,14 @@ const AddTodo = () => {
   const addTodoHandler = (e) => {
     e.preventDefault();
     dispatch(addTodo(input));
-    setInput('')
+    setInput('');
   };
 
-  return <form onSubmit={addTodoHandler}></form>;
+  return (
+    <form onSubmit={addTodoHandler}>
+      <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+    </form>
+  );
 };
 
 export default AddTodo;
