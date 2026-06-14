@@ -50,10 +50,11 @@ export default function ItemsList() {
   return (
     <>
       <h3>List Items</h3>
+      <input type="text"placeholder="Search items..." value={search} onChange={(e) => setSearch(e.target.value)} />
       <ul>
         {filterdItems.map((item) => {
           const isSelected = selectedItems.includes(item.id);
-
+          const disableCheckbox = !isSelected && selectedItems.length >= 3
           return (
             <li key={item.id}>
               <label>
@@ -61,6 +62,7 @@ export default function ItemsList() {
                   type="checkbox"
                   checked={isSelected}
                   onChange={() => handleSelect(item.id)}
+                  disabled={disableCheckbox}
                 />
                 {item.name}
               </label>

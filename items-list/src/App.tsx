@@ -8,7 +8,7 @@ import Products from './Products';
 // import Todo from './Todo';
 // import Table from './Table';
 // import Carousel from './Carousel'
-// import ItemsList from './ItemsList'
+import ItemsList from './ItemsList'
 // import Search from './Search'
 // import StarRating from './StarRating'
 
@@ -25,7 +25,8 @@ function App() {
       {/* <h3>Folder Structure/ Nested Accordion/ Nested Comments</h3>
       <Folder explorer={explorer} /> */}
       {/* <Products/> */}
-      <FruitsList/>
+      <ItemsList />
+      {/* <FruitsList/> */}
     </>
   );
 }
