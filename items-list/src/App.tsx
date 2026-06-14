@@ -1,4 +1,5 @@
 import './App.css';
+import FruitsList from './FruitsList';
 
 import Products from './Products';
 // import explorer from './data/folderData';
@@ -23,7 +24,8 @@ function App() {
       <Todo /> */}
       {/* <h3>Folder Structure/ Nested Accordion/ Nested Comments</h3>
       <Folder explorer={explorer} /> */}
-      <Products/>
+      {/* <Products/> */}
+      <FruitsList/>
     </>
   );
 }
