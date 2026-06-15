@@ -9,7 +9,7 @@ const Todos = () => {
     <div>
       {todos.map((todo) => (
         <li key={todo.id}>
-          {todo.text}{' '}
+          {todo.text}
           <button
             onClick={() => {
               dispatch(removeTodo(todo.id));
