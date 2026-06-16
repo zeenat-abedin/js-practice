@@ -48,7 +48,6 @@ export default function FruitsList() {
         {filteredItems.map((item) => {
           const isSelected = selectedItems.includes(item.id);
           const disableCheckbox = !isSelected && selectedItems.length >= 3;
-
           return (
             <li>
               <label>
