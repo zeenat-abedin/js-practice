@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useProducts } from './hooks/useProducts';
+import { useDebounce } from './hooks/useDebounce';
 
 export default function Products() {
   const { products, loading, error } = useProducts();
@@ -7,6 +8,7 @@ export default function Products() {
   const [category, setCategory] = useState('all');
   const [sortBy, setSortBy] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const debouncedSearch = useDebounce(search, 500)
 
   const ITEMS_PER_PAGE = 10;
 
@@ -17,9 +19,9 @@ export default function Products() {
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
-    if (search.trim()) {
+    if (debouncedSearch.trim()) {
       result = result.filter((product) =>
-        product.title.toLowerCase().includes(search.toLowerCase()),
+        product.title.toLowerCase().includes(debouncedSearch.toLowerCase()),
       );
     }
 
@@ -45,7 +47,7 @@ export default function Products() {
     }
 
     return result;
-  }, [category, products, search, sortBy]);
+  }, [category, debouncedSearch, products, sortBy]);
 
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
