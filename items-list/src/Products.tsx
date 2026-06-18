@@ -8,7 +8,7 @@ export default function Products() {
   const [category, setCategory] = useState('all');
   const [sortBy, setSortBy] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const debouncedSearch = useDebounce(search, 500)
+  const debouncedSearch = useDebounce(search, 500);
 
   const ITEMS_PER_PAGE = 10;
 
@@ -57,11 +57,11 @@ export default function Products() {
   );
 
   if (loading) {
-    return <h2>Loading products...</h2>
+    return <h2>Loading products...</h2>;
   }
 
   if (error) {
-    return <h2>Error: {error}</h2>
+    return <h2>Error: {error}</h2>;
   }
 
   return (
@@ -109,11 +109,18 @@ export default function Products() {
         </tbody>
       </table>
       <div style={{ marginTop: '20px' }}>
-        <button onClick={() => setCurrentPage((curr) => curr - 1)} disabled={currentPage === 1}>Prev</button>
+        <button onClick={() => setCurrentPage((curr) => curr - 1)} disabled={currentPage === 1}>
+          Prev
+        </button>
         <span style={{ margin: '0 10px' }}>
           Page {currentPage} of {totalPages}
         </span>
-        <button onClick={() => setCurrentPage((curr) => curr + 1)} disabled={currentPage === totalPages}>Next</button>
+        <button
+          onClick={() => setCurrentPage((curr) => curr + 1)}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
       </div>
     </>
   );
