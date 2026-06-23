@@ -12,3 +12,7 @@ export const useDebounce = (value: string, delay = 300) => {
 
   return debouncedValue
 };
+
+
+const sum = ((2 * (3 + 2)) - 1)
+console.log(sum)
