@@ -14,3 +14,8 @@ console.log(anotherUser[0])
 
 let today = new Date()
 console.log(today.getDate())
+
+//implicit conversion
+
+let isValue = true;
+console.log(isValue + 1) //2
