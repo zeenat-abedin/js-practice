@@ -18,4 +18,4 @@ console.log(today.getDate())
 //implicit conversion
 
 let isValue = true;
-console.log(isValue + 1) //2
+console.log(isValue + 1) //2 --> since true == 1
