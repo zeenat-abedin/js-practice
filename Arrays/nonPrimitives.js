@@ -31,3 +31,10 @@ popularTeas.pop()
 console.log(popularTeas)
 console.log(softCopyTeas) //this will also get manipulated
 
+/* You have an array named topCities containing Berlin, Singapore and New York.
+ Create a hard copy of this array named hardCopyCities */
+
+const topCities = ["Berlin", "Singapore", "New York"]
+const hardCopyCities = [...topCities]
+
+console.log(hardCopyCities)
