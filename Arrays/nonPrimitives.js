@@ -38,3 +38,14 @@ const topCities = ["Berlin", "Singapore", "New York"]
 const hardCopyCities = [...topCities]
 
 console.log(hardCopyCities)
+
+/* You have 2 arrays europeanCities containing Paris
+and Rome and asianCities containing Tokyo and Bangkok.
+Merge both the arrays into an array named worldCities */
+
+const europeanCities = ["Paris", "Rome"]
+const asianCities = ["Tokyo", "Bangkok"]
+
+const worldCities = europeanCities.concat(asianCities)
+
+console.log(worldCities)
