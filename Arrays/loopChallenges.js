@@ -2,7 +2,7 @@
 sand stores the result in a variable named sum */
 
 let sum = 0;
-let i = 0;
+let i = 1;
 
 while (i <= 5) {
   sum += i;
