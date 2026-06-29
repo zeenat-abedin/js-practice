@@ -18,24 +18,37 @@ let countdown = [];
 let j = 5;
 
 while (j > 0) {
-    countdown.push(j)
-    j--
+  countdown.push(j);
+  j--;
 }
 
-console.log(countdown)
+console.log(countdown);
 
 /* Write a do while loop that prompts a user to enter
 their favourite tea type until they enter stop. 
 Store each tea type in array named teaCollection */
 
 let teaCollection = [];
-let tea = "";
+let tea = '';
 
 do {
-  tea = prompt(`Enter your favourite tea (type 'stop' to finish)`)  
-  if(tea === 'stop'){
-    teaCollection.push(tea)
+  tea = prompt(`Enter your favourite tea (type 'stop' to finish)`);
+  if (tea === 'stop') {
+    teaCollection.push(tea);
   }
 } while (tea !== 'stop');
 
-console.log(teaCollection)
+console.log(teaCollection);
+
+/* Write a do while loop that adds numbers from 1 to 3
+ and stores the result in a variable named total. */
+
+let total = 0;
+let k = 1;
+
+do {
+    total += k
+    k++
+} while (k <= 3);
+
+console.log(total)
