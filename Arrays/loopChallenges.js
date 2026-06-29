@@ -66,3 +66,17 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(multipliedNumbers)
+
+/* 6. Write a for loop that lists all the cities in the
+array [Paris, New York, Tokyo, London] and stores each city 
+in a new array named cityList*/
+
+const cities = ["Paris", "New York", "Tokyo", "London"]
+const cityList = []
+
+for (let i = 0; i < cities.length; i++) {
+    const city = cities[i];
+    cityList.push(city)
+}
+
+console.log(cityList)
