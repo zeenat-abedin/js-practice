@@ -80,3 +80,15 @@ for (let i = 0; i < cities.length; i++) {
 }
 
 console.log(cityList)
+
+/* Write a for loop that loops through the array 
+["green tea", "black tea", "chai", "oolong tea"] 
+and stops the loop when it finds chai. Store all teas 
+before chai in a new array named selectedTeas */
+
+const teas = ["green tea", "black tea", "chai", "oolong tea"] 
+
+for (let i = 0; i < teas.length; i++) {
+  const element = teas[i];
+  
+}
