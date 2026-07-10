@@ -97,3 +97,4 @@ for (let i = 0; i < teas.length; i++) {
 }
 
 console.log(selectedTeas);
+
