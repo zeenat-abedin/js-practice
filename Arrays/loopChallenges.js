@@ -47,48 +47,53 @@ let total = 0;
 let k = 1;
 
 do {
-    total += k
-    k++
+  total += k;
+  k++;
 } while (k <= 3);
 
-console.log(total)
+console.log(total);
 
 /* 5. Write a for loop that multiplies each element in 
 the array [2, 4, 6] by 2 and stores the results in a 
 new array named multipliedNumbers */
 
-const numbers = [2, 4, 6]
-const multipliedNumbers = []
+const numbers = [2, 4, 6];
+const multipliedNumbers = [];
 
 for (let i = 0; i < numbers.length; i++) {
-    const element = numbers[i] * 2;
-    multipliedNumbers.push(element)
+  const element = numbers[i] * 2;
+  multipliedNumbers.push(element);
 }
 
-console.log(multipliedNumbers)
+console.log(multipliedNumbers);
 
 /* 6. Write a for loop that lists all the cities in the
 array [Paris, New York, Tokyo, London] and stores each city 
 in a new array named cityList*/
 
-const cities = ["Paris", "New York", "Tokyo", "London"]
-const cityList = []
+const cities = ['Paris', 'New York', 'Tokyo', 'London'];
+const cityList = [];
 
 for (let i = 0; i < cities.length; i++) {
-    const city = cities[i];
-    cityList.push(city)
+  const city = cities[i];
+  cityList.push(city);
 }
 
-console.log(cityList)
+console.log(cityList);
 
 /* Write a for loop that loops through the array 
 ["green tea", "black tea", "chai", "oolong tea"] 
 and stops the loop when it finds chai. Store all teas 
 before chai in a new array named selectedTeas */
 
-const teas = ["green tea", "black tea", "chai", "oolong tea"] 
+const teas = ['green tea', 'black tea', 'chai', 'oolong tea'];
+const selectedTeas = [];
 
 for (let i = 0; i < teas.length; i++) {
-  const element = teas[i];
-  
+  if (teas[i] === 'chai') {
+    break;
+  }
+  selectedTeas.push(teas[i]);
 }
+
+console.log(selectedTeas);
