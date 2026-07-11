@@ -81,7 +81,7 @@ for (let i = 0; i < cities.length; i++) {
 
 console.log(cityList);
 
-/* Write a for loop that loops through the array 
+/* 7. Write a for loop that loops through the array 
 ["green tea", "black tea", "chai", "oolong tea"] 
 and stops the loop when it finds chai. Store all teas 
 before chai in a new array named selectedTeas */
@@ -98,3 +98,21 @@ for (let i = 0; i < teas.length; i++) {
 
 console.log(selectedTeas);
 
+/* 8. Write a for loop that loops through the array 
+["London", "New York", "Paris", "Berlin"] 
+and skips "Paris". Store the other cities in a new array
+named visitedCities
+ */
+
+const citiesArr = ["London", "New York", "Paris", "Berlin"]
+const visitedCities = []
+
+for (let i = 0; i < citiesArr.length; i++) {
+  const element = citiesArr[i];
+  if (element === 'Paris') {
+    continue
+  }
+  visitedCities.push(element)
+}
+
+console.log(visitedCities)
