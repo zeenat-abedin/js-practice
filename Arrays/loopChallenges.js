@@ -116,3 +116,19 @@ for (let i = 0; i < citiesArr.length; i++) {
 }
 
 console.log(visitedCities)
+
+/* 9. Write a for-of loop to iterate through the array
+ [1,2,3,4,5] and stop when the number 4 is found. Store 
+ the numbers before 4 in an array named smallNumbers */
+
+const numsArr = [1, 2, 3, 4, 5]
+const smallNumbers = []
+
+for (const element of numsArr) {
+   if (element === 4) {
+    break
+  }
+  smallNumbers.push(element)
+}
+
+console.log(smallNumbers)
