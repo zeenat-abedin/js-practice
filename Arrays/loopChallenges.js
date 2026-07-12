@@ -125,10 +125,14 @@ const numsArr = [1, 2, 3, 4, 5]
 const smallNumbers = []
 
 for (const element of numsArr) {
-   if (element === 4) {
+  if (element === 4) {
     break
   }
   smallNumbers.push(element)
 }
 
 console.log(smallNumbers)
+
+/* 10. Write a for-of loop to iterate through the array
+ ["chai", "green tea", "herbal tea", "black tea"] and skip 
+ "herbal tea" */
