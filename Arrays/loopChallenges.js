@@ -135,4 +135,16 @@ console.log(smallNumbers)
 
 /* 10. Write a for-of loop to iterate through the array
  ["chai", "green tea", "herbal tea", "black tea"] and skip 
- "herbal tea" */
+ "herbal tea". Store the other teas in an array named preferredTeas */
+
+const teasArr = ["chai", "green tea", "herbal tea", "black tea"]
+const preferredTeas = [] 
+
+for (const element of teasArr) {
+  if (element === "herbal tea" ) {
+    continue
+  }
+  preferredTeas.push(element)
+}
+
+console.log(preferredTeas)
