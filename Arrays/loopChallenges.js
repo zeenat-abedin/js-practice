@@ -150,14 +150,43 @@ for (const element of teasArr) {
 console.log(preferredTeas)
 
 /* 11. Use a for-in loop to loop through an object containing city populations. 
-Skip any city with a population below 3 million and store the rest in a new
- object named 'largeCities'.*/
+Stop the loop when the population of Berlin is found*/
 
-let citiesPopulation = {
+const citiesPopulation = {
   "London": 8900000,
   "New York": 8400000,
   "Paris": 2200000,
   "Berlin": 3500000
 }
+const cityNewPopulation = {}
 
-console.log(Object.values(citiesPopulation))
+for (const city in citiesPopulation) {
+  if (city === 'Berlin') {
+    break
+  }
+  cityNewPopulation[city] = citiesPopulation[city] //key = value
+}
+
+console.log(cityNewPopulation)
+
+/* 12. Use a for-in loop to loop through an object containing city populations. 
+Skip any city with a population below 3 million and store the rest in a new
+ object named 'largeCities'.*/
+
+const worldCities = {
+  "Syndney": 5000000,
+  "Tokyo": 9000000,
+  "Berlin": 3500000,
+  "Paris": 2200000,
+}
+
+const largeCities = {}
+
+for (const city in worldCities){
+  if (worldCities[city] < 3000000) {
+    continue
+  }
+  largeCities[city] = worldCities[city]
+}
+
+console.log(largeCities)
