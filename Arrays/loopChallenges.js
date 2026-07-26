@@ -190,3 +190,20 @@ for (const city in worldCities){
 }
 
 console.log(largeCities)
+
+/* Write a for loop that iterates through the array 
+[2, 5, 7, 9]. Skip the value '7' and multiply the 
+rest by 2. Store the results in a new array named 
+'doubledNumbers' */
+
+const numbersArr = [2, 5, 7, 9]
+const doubledNumbers = []
+for(let i = 0; i < numbersArr.length; i++){
+  const element = numbersArr[i]
+  if (element === 7){
+    continue
+  }
+  doubledNumbers.push(element)
+}
+
+console.log(doubledNumbers)
