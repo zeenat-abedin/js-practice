@@ -207,3 +207,22 @@ for(let i = 0; i < numbersArr.length; i++){
 }
 
 console.log(doubledNumbers)
+
+/* Use a for of loop to iterate through the array 
+["chai", "green tea", "black tea", "herbal tea"] and 
+stop when the length of the current tea name is greater
+ than 10. Store the teas iterated over in an array named shortTeas*/
+
+const myTeas = ["chai", "green tea", "namhya liver cleanser tea", "black tea", "herbal tea"]
+const shortTeas = []
+
+for (const tea of myTeas){
+  if (tea.length > 10) {
+    break
+  }
+  shortTeas.push(tea)
+}
+
+console.log("------------------")
+
+console.log(shortTeas)
