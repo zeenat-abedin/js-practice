@@ -10,7 +10,7 @@ function makeTea(typeOfTea) {
 const teaOrder = makeTea("green tea")
 console.log(teaOrder)
 
-/* Create a function named orderTea that takes
+/* 2. Create a function named orderTea that takes
 one parameter teaType. Inside this function, 
 create another function named confirmOrder 
 that returns a message like "Order confirmed for chai". 
@@ -25,3 +25,15 @@ function orderTea(teaType) {
 
 const orderConfirmation = orderTea("masala chai")
 console.log(orderConfirmation)
+
+/* 3. Write an arrow function named calculateTotal
+that takes two parameters price and quantity. 
+The function should return the total cost by multiplying
+the price and quantity. Store the result in a variable
+named totalCost.*/
+
+function calculateTotal(price, quantity) {
+    return totalCost = price * quantity
+}
+
+console.log(calculateTotal(100, 5));   
