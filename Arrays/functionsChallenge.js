@@ -1,0 +1,17 @@
+/*  1. Write a function named makeTea that takes
+one parameter typeOfTea and returns a string 
+like Making green tea when called with green tea. 
+Store the result in a variable named teaOrder */
+
+function makeTea(typeOfTea) {
+    return `Making ${typeOfTea}`
+}
+
+const teaOrder = makeTea("green tea")
+console.log(teaOrder)
+
+/* Create a function named orderTea that takes
+one parameter teaType. Inside this function, 
+create another function named confirmOrder 
+that returns a message like "Order confirmed for chai". 
+Call confirmOrder from within orderTea and return the result.*/
