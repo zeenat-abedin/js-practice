@@ -36,4 +36,19 @@ function calculateTotal(price, quantity) {
     return totalCost = price * quantity
 }
 
-console.log(calculateTotal(100, 5));   
+console.log(calculateTotal(100, 5));
+
+/* Write a function named processTeaOrder that takes
+another function makeTea as parameter and calls it with
+the argument earl grey. Return the result of calling makeTea */
+
+function processTeaOrder(teaFunction) {
+    return teaFunction('earl grey')
+}
+
+function makeTea(typeOfTea) {
+    return `makeTea: ${typeOfTea}`
+}
+
+let order = processTeaOrder(makeTea)
+console.log(order)
